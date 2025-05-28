@@ -1,0 +1,472 @@
+:root {
+    /* Player Colors */
+    --Red: #d32f2f;
+    --Blue: #1976d2;
+    --Green: #388e3c;
+    --Yellow: #FBC02D;
+    --Purple: #7B1FA2;
+    --Black: #212121;
+    --Orange: #f57c00;
+    --Pink: #e91e63;
+
+
+    --background-color: #181818;
+    --tranceparent-bg: rbg(120, 120, 120, 200);
+
+    --Minor-Dividors: #414141;
+
+    --Locked-Tech-Btn-bg: #414141;
+    --Tech-Exausted-Color: #ed8de8;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: #444;
+    background: var(--background-color);
+    font: 300 18px/18px Roboto, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center; /*Maybe switch to baselien*/
+}
+
+
+.Top {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.Top-Overlay {
+    display: flex;
+}
+
+#Top-Main {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+#Text-Column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.Main-Text-Row {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid white;
+}
+
+
+
+#Player-Columns {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 80%;
+}
+
+.Player-Column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 15%;
+    border-right: 2px solid white; 
+}
+
+
+
+.Player-Name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.Player-Color {
+    width: 10%;
+    height: 80%;
+    background-color: white;
+}
+
+/* .Score-Row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+} */
+
+.Score-Counter-Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+
+/* Add the rounded corners later */
+.Minus-Btn {
+    height: 80%;
+    width: 20%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+}
+
+.Plus-Btn {
+    height: 80%;
+    width: 20%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+}
+
+.Score-Input {
+    height: 80%;
+    width: 40%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+}
+
+
+
+#Tech-Header-Row {
+    height: 80%;
+    border-top: 0px;
+}
+
+#Text_Tech_All_Container {
+    height: 100%;
+    width: 100%;
+}
+
+.All-Tech-Row {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    margin: 0px;
+}
+
+.Main-Techs-Container {
+    width: 100%;
+    height: 100%;
+}
+
+.Tech-Color-Section {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-top: 1px solid white;
+}
+
+.Tech-Btns-Container {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-top: 1px solid var(--Minor-Dividors);
+    
+}
+
+.Tech_Card_Text {
+    width: 100%;
+    height: 15%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    padding-left: 5px;
+    font-size: 70%;
+    border-top: 1px solid var(--Minor-Dividors); 
+}
+
+.Tech-Btn {
+    width: 40%;
+    height: 80%;
+    border: none;
+}
+
+.Tech-Btn-Locked {
+    background-color: var(--Locked-Tech-Btn-bg);
+}
+
+/* .Tech-Btn-Locked:hover {
+    background-color: #545454;
+} */
+
+.Tech-Btn-Red {
+    background-color: var(--Red);
+}
+
+.Tech-Btn-Yellow {
+    background-color: var(--Yellow);
+}
+
+.Tech-Btn-Green {
+    background-color: var(--Green);
+}
+
+.Tech-Btn-Blue {
+    background-color: var(--Blue);
+}
+
+.Tech-Btn-Purple {
+    background-color: var(--Purple);
+    
+}
+
+.Tech-Btn-Exaust {
+    filter: brightness(0.6);
+    /* background-color: var(--Tech-Exausted-Color); */
+}
+
+.Tech-Btn-Locked {
+    background-color: var(--Locked-Tech-Btn-bg);
+}
+
+.Tech-Btn:hover {
+    filter: brightness(1.2); /* Increase brightness by 20% */
+}
+
+
+
+
+
+
+.First-Tech-In-Section {
+    border-top: none;
+}
+
+
+/* Speaker & Turn Order Stuff */
+
+
+
+.Strategy-Dropdown-Btn {
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    display: block;
+    color: black;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.Strat-Dropdown-Container {
+    width: 30%;
+    height: 80%;
+}
+
+/* Dropdown Container */
+.Strat-Dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+/* Dropdown Content */
+.Strat-Dropdown-Content {
+    display: none;
+    position: absolute;
+    width: 3%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    /* min-width: 200px; */
+    border-radius: 5px;
+}
+
+/* Dropdown Options */
+.Strat-Dropdown-Option {
+    /* padding: 10px; */
+    cursor: pointer;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Last option doesn't need a border */
+.Strat-Dropdown-Option:last-child {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+.Strat-Dropdown-Option:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown when active */
+.Strat-Dropdown.show .Strat-Dropdown-Content {
+    display: block;
+}
+
+.Strat-Dropdown-Container.show .Strat-Dropdown-Content {
+    display: block;
+}
+
+
+/* Speaker Token */
+
+.Speaker-Token-Btn {
+    width: 50%;
+    height: 80%;
+    border: none;
+    padding: none;
+    margin: none;
+    background-color: rgba(0, 0, 0, 0.416);
+}
+
+.Speaker-Token-Btn img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+#Add-Player-Top {
+    
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+
+    width: 70%;
+    height: 70%;
+    background-color: var(--tranceparent-bg);
+}
+
+
+/* Add Player Style */
+#Player-Name-Input-Container {
+    width: 100%;
+    height: 20%;
+}
+
+#Player-Name-Input {
+    width: 60%;
+    height: 100%;
+    /* Deal with color Later */
+}
+
+/* I need to position this */
+#Player-Color-Label {
+    margin-top: 5%;
+    width: 100%;
+    height: 10%;
+    font-size: 2em;
+    color: white;
+
+}
+
+#Player-Color-Selector-Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    height: 30%;
+    margin-top: 5%;
+}
+
+#Add-Player-Footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#Add-Player-Footer button {
+    width: 20%;
+    height: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Hidden {
+    display: None;
+}
+
+
+
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    min-width: 150px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+

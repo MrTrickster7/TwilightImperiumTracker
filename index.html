@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI4 UI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- This might get changed to be just a specific section -->
+    <div id="Top-Main" class="Top">
+        <div id="Text-Column">
+            <div id="Name-Color-Row" class="Main-Text-Row">
+                <div class="Player-Names-Header">Names</div>
+            </div>
+            <div id="Speaker-Header-Row" class="Main-Text-Row">Speaker</div>
+            <div id="Score-Header-Row" class="Main-Text-Row">Scores</div>
+            <div id="Tech-Header-Row" class="Main-Text-Row">
+                
+            </div>
+        </div>
+        <div id="Player-Columns">
+            
+        </div>
+        
+    </div>
+
+
+
+
+    <div id="Add-Player-Top" class="Top-Overlay Hidden">
+        <div id="Player-Name-Input-Container">
+            <input id="Player-Name-Input" type="text" placeholder="player name">
+        </div>
+        <div id="Faction-Tech-Dropdown-Container">
+            <!-- Dropdown to select your faction for faction
+             specific tech -->
+            <div class="dropdown">
+                <button class="faction-dropdown-btn">Faction</button>
+                <div class="dropdown-content">
+                    <a href="#">Faction 1</a>
+                    <a href="#">Faction 2</a>
+                    <a href="#">Faction 3</a>
+                </div>
+            </div>
+        </div>
+        <div id="Player-Color-Label">Select Player's Color:</div>
+        <div id="Player-Color-Selector-Container">
+            <label>
+                <input type="radio" name="color" value="red" checked> Red
+            </label>
+            <label>
+                <input type="radio" name="color" value="orange"> Orange
+            </label>
+            <label>
+                <input type="radio" name="color" value="yellow"> Yellow
+            </label>
+        </div>
+        
+        <div id="Add-Player-Footer">
+            <button id="Add-Player-Btn" class="Add-Player-Footer-Btn">Add</div>
+            <button id="Close-Add-Player-Btn" class="Add-Player-Footer-Btn">Close</div>
+        </div>
+    </div>
+
+
+    <div id="Top-Agendas" class="Top Hidden"></div>
+</body>
+</html>
