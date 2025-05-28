@@ -8,6 +8,12 @@
     <script src="main.js"></script>
 </head>
 <body>
+    <button id="Open-Sidebar-Btn">=</button>
+    <div id="Sidebar" class="collapsed">
+        <button id="Close-Sidebar-Btn">=</button>
+        <button id="Side-Add-Player-Btn" class="Sidebar-Option">Add Player</button>
+        <button id="Side-Remove-Player-Btn" class="Sidebar-Option">Remove Player</button>
+    </div>
     <!-- This might get changed to be just a specific section -->
     <div id="Top-Main" class="Top">
         <div id="Text-Column">
@@ -22,45 +28,60 @@
         </div>
         <div id="Player-Columns">
             
-        </div>
-        
+        </div>    
     </div>
+
+    
+    
 
 
 
 
     <div id="Add-Player-Top" class="Top-Overlay Hidden">
-        <div id="Player-Name-Input-Container">
+        <div class="Add-Player-Input-Container">
+            <div class="Add-Player-Header">Player Name</div>
             <input id="Player-Name-Input" type="text" placeholder="player name">
         </div>
-        <div id="Faction-Tech-Dropdown-Container">
-            <!-- Dropdown to select your faction for faction
-             specific tech -->
-            <div class="dropdown">
-                <button class="faction-dropdown-btn">Faction</button>
-                <div class="dropdown-content">
-                    <a href="#">Faction 1</a>
-                    <a href="#">Faction 2</a>
-                    <a href="#">Faction 3</a>
-                </div>
+        <div id="Pick-Color" class="Add-Player-Input-Container">
+            <div class="Add-Player-Header">Select Color</div>
+            <div id="Player-Color-Selector-Container">
+                <!-- <div class="Color-Option-Container">
+                    <label>
+                        <input type="radio" name="color" value="red" checked> Red
+                    </label>
+                </div> -->
+                <label>
+                    <input type="radio" name="color" value="red" checked> Red
+                </label>
+                <label>
+                    <input type="radio" name="color" value="orange"> Orange
+                </label>
+                <label>
+                    <input type="radio" name="color" value="yellow" > Yellow
+                </label>
+                <label>
+                    <input type="radio" name="color" value="green" > Green
+                </label>
+                <label>
+                    <input type="radio" name="color" value="blue" > Blue
+                </label>
+                <label>
+                    <input type="radio" name="color" value="purple" > Purple
+                </label>
+                <label>
+                    <input type="radio" name="color" value="pink" > Pink
+                </label>
+                <label>
+                    <input type="radio" name="color" value="black" > Black
+                </label>
             </div>
         </div>
-        <div id="Player-Color-Label">Select Player's Color:</div>
-        <div id="Player-Color-Selector-Container">
-            <label>
-                <input type="radio" name="color" value="red" checked> Red
-            </label>
-            <label>
-                <input type="radio" name="color" value="orange"> Orange
-            </label>
-            <label>
-                <input type="radio" name="color" value="yellow"> Yellow
-            </label>
-        </div>
+        
         
         <div id="Add-Player-Footer">
-            <button id="Add-Player-Btn" class="Add-Player-Footer-Btn">Add</div>
-            <button id="Close-Add-Player-Btn" class="Add-Player-Footer-Btn">Close</div>
+            <button id="Close-Add-Player-Btn" class="Add-Player-Footer-Btn">Close</button>`
+            <button id="Add-Player-Btn" class="Add-Player-Footer-Btn">Add</button>    
+            
         </div>
     </div>
 

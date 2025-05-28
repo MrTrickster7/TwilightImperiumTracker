@@ -32,19 +32,8 @@ window.onload = async function() {
     const parent = document.getElementById("Player-Columns");
     const temp = new Player_HTML("Ethan", "red", 0);
     temp.Main();
-}
 
-function Setup_All_Dropdowns() {
-    document.querySelector(".dropdown-btn").addEventListener("click", function() {
-    document.querySelector(".dropdown").classList.toggle("show");
-    });
-
-    // Close dropdown when clicking outside
-    window.addEventListener("click", function(event) {
-        if (!event.target.matches(".dropdown-btn") && !event.target.matches(".dropdown-option")) {
-            document.querySelector(".dropdown").classList.remove("show");
-        }
-    });
+    window.Sidebar = new Sidebar();
 }
 
 const Player_Colors = { "Red": '#d32f2f',
@@ -434,19 +423,22 @@ const Strategy_Options = [
     { "Color": "#388e3c", "Text": 4 },
     { "Color": "#258a98", "Text": 5 },
     { "Color": "#1352bd", "Text": 6 },
-    { "Color": "#40405c", "Text": 7 },
+    { "Color": "#4a4a89", "Text": 7 },
     { "Color": "#7B1FA2", "Text": 8 },
     { "Color": "#414141", "Text": "P"}
 ];
-
+//"#40405c"
 
 class Player_Strategy_Btn {
     constructor(parent, index) {
         this.Index = index;
         this.Parent = parent;
+        this.Is_Exhaust = false;
         this.Selected_Option = Strategy_Options[0];
         this.Main();
     }
+
+    
 
     Setup() {
         // document.getElementById(`Strat-Dropdown-Btn-${this.Index}`).addEventListener("click", () => {
@@ -463,6 +455,11 @@ class Player_Strategy_Btn {
         this.Btn.addEventListener("click", () => {
             console.log("Toggle Show");
             this.Dropdown_Container.classList.toggle("show");
+        });
+
+        this.Btn.addEventListener("contextmenu", (event) => {
+            event.preventDefault(); // Stops default browser right-click menu
+            this.Btn.classList.toggle("Exausted");
         });
     }
 
@@ -581,6 +578,46 @@ class Speaker_Token_Btn {
     }
 
     
+}
+
+class Sidebar {
+    constructor() {
+        this.Is_Open_Btn_Visible = true;
+        this.Setup();
+    }
+
+    Toggle_Sidebar() {
+        document.getElementById("Sidebar").classList.toggle("collapsed");
+        document.getElementById("Open-Sidebar-Btn").classList.toggle("Hidden");
+    }
+
+    Open_Add_Player_Panel() {
+        this.Toggle_Sidebar();
+        this.Toggle_Add_Player_Panel();
+    }
+
+    Toggle_Add_Player_Panel() {
+        document.getElementById("Add-Player-Top").classList.toggle("Hidden");
+    }
+
+    Setup_Toggle() {
+        document.getElementById("Open-Sidebar-Btn").addEventListener('click', this.Toggle_Sidebar.bind(this));
+        document.getElementById("Close-Sidebar-Btn").addEventListener('click', this.Toggle_Sidebar.bind(this));
+    }
+
+    Setup_Add_Player_Btn() {
+        document.getElementById("Side-Add-Player-Btn").addEventListener('click', this.Open_Add_Player_Panel.bind(this));
+    }
+
+    Setup_Close_Add_Player_Panel() {
+        document.getElementById("Close-Add-Player-Btn").addEventListener('click', this.Toggle_Add_Player_Panel.bind(this));
+    }
+
+    Setup() {
+        this.Setup_Toggle();
+        this.Setup_Add_Player_Btn();
+        this.Setup_Close_Add_Player_Panel();
+    }
 }
 
 

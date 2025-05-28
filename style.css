@@ -256,6 +256,7 @@ body {
     /* background-color: var(--Tech-Exausted-Color); */
 }
 
+
 .Tech-Btn-Locked {
     background-color: var(--Locked-Tech-Btn-bg);
 }
@@ -264,20 +265,12 @@ body {
     filter: brightness(1.2); /* Increase brightness by 20% */
 }
 
-
-
-
-
-
 .First-Tech-In-Section {
     border-top: none;
 }
 
 
 /* Speaker & Turn Order Stuff */
-
-
-
 .Strategy-Dropdown-Btn {
     width: 100%;
     height: 100%;
@@ -364,109 +357,250 @@ body {
 
 
 #Add-Player-Top {
-    
-    flex-direction: row;
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
 
     width: 70%;
-    height: 70%;
-    background-color: var(--tranceparent-bg);
+    height: 90%;
+    background-color: #212121d1;
 }
 
 
 /* Add Player Style */
-#Player-Name-Input-Container {
-    width: 100%;
+.Add-Player-Input-Container {
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: start;
+    /* padding-top: 5%; */
+    width: 50%;
     height: 20%;
 }
 
 #Player-Name-Input {
-    width: 60%;
-    height: 100%;
+    width: 100%;
+    height: 65%;
     /* Deal with color Later */
 }
 
 /* I need to position this */
-#Player-Color-Label {
-    margin-top: 5%;
-    width: 100%;
-    height: 10%;
-    font-size: 2em;
-    color: white;
 
+.Add-Player-Header {
+    font-size: 5vh;
+    width: 100%;
+    height: 5vh;
+    padding: 5%;
+    padding-left: 0px;
+    color: white;
+    text-align: start;
+    text-justify: center;
 }
 
 #Player-Color-Selector-Container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: start;
-    width: 50%;
-    height: 30%;
-    margin-top: 5%;
+    width: 100%;
+    height: 60%;
 }
 
-#Add-Player-Footer {
+.Color-Option-Container {
+    display: flex;
+    flex-direction: row;
+}
+
+#Pick-Color {
+    height: 70%;
+}
+
+
+#Player-Color-Selector-Container label {
     width: 100%;
-    height: 5%;
+    height: 10%;
+    box-sizing: border-box;
+    color: white;
+    font-size: 3vh;
+    text-justify: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* following an online guide here */
+#Player-Color-Selector-Container label input[type="radio"] {
+    box-sizing: border-box;
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    background-color: var(--Minor-Dividors);
+    /* Not removed via appearance */
+    margin: 0px;
+    padding: 0px;
+    font: inherit;
+    color: currentColor;
+    width: 1.25vw;
+    height: 1.25vw;
+    /* border: 1px solid purple; */
+    border-radius: 50%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+
+
+#Player-Color-Selector-Container label input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.75vw;
+    height: 0.75vw;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 120ms transform ease-in-out;
+}
+
+#Player-Color-Selector-Container label input[type="radio"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#Player-Color-Selector-Container label input[value="red"]:checked::before {
+    background-color: var(--Red);
+}
+#Player-Color-Selector-Container label input[value="orange"]:checked::before {
+    background-color: var(--Orange);
+}
+#Player-Color-Selector-Container label input[value="yellow"]:checked::before {
+    background-color: var(--Yellow);
+}
+#Player-Color-Selector-Container label input[value="green"]:checked::before {
+    background-color: var(--Green);
+}
+#Player-Color-Selector-Container label input[value="blue"]:checked::before {
+    background-color: var(--Blue);
+}
+#Player-Color-Selector-Container label input[value="purple"]:checked::before {
+    background-color: var(--Purple);
+}
+#Player-Color-Selector-Container label input[value="pink"]:checked::before {
+    background-color: var(--Pink);
+}
+#Player-Color-Selector-Container label input[value="black"]:checked::before {
+    background-color: var(--Black);
+}
+
+
+
+#Add-Player-Footer {
+    position: absolute;
+    bottom: 1%;
+    width: 96%;
+    height: 7%;
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
 }
 
 #Add-Player-Footer button {
-    width: 20%;
+    width: 10%;
     height: 80%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Hidden {
-    display: None;
-}
-
-
-
-/* .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-btn {
-    background-color: #3498db;
-    color: white;
-    padding: 10px;
     border: none;
+    background-color: white;
+}
+
+
+
+
+/* Side Bar */
+
+#Sidebar {
+    height: 100%;
+    width: 15vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: 2px solid white;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0px 0px;
+
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+}
+
+#Sidebar.collapsed {
+    transform: translateX(-200%);
+}
+
+#Close-Sidebar-Btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: #818181;
     cursor: pointer;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    min-width: 150px;
+#Open-Sidebar-Btn {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: var(--tranceparent-bg);
+    color: white;
+    border: none;
+    /* padding: 10px 15px; */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
 }
 
-.dropdown-content a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
+.Sidebar-Option {
+    padding: 10px 20px;
+    margin: 0px 0px;
+    background: none;
+    border: none;
+    color: #818181;
+    font-size: 3vh;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.Sidebar-Option:hover {
+    color: #f1f1f1;
 }
+
+
+
+
+/* Stays at the bottom */
+.Exausted {
+    filter: brightness(0.6);
+    color: white;
+}
+
+.Hidden {
+    display: None !important;
+}
+
+
+
 
 
