@@ -19,38 +19,59 @@
 
 window.onload = async function() {
     window.resizeTo(1920, 1080);
-    window.Player_Count = 0;
-    // window.Tech_Cards = Tech_Cards;
     await Import_Tech_Cards();
-    console.log(window.Tech_Cards);
-    if (window.Tech_Cards) {  // Ensure Tech_Cards is defined before using it
-        const Tech_HTML = new HTML_Text_Column();
-        Tech_HTML.Main();
-    } else {
-        console.error("Tech_Cards failed to load.");
-    }
-    const parent = document.getElementById("Player-Columns");
-    const temp = new Player_HTML("Ethan", "red", 0);
-    temp.Main();
-
+    Display_Tech_Cards();
+    await Import_Agenda_Cards();
+    
+    window.Player_Manager = new Player_Column_Manager();
     window.Sidebar = new Sidebar();
+    window.Card_Search = new Card_Search();
 }
 
-const Player_Colors = { "Red": '#d32f2f',
-                        "Blue": '#1976d2',
-                        "Green": '#388e3c',
-                        "Yellow": '#FBC02D',
-                        "Purple": '#7B1FA2',
-                        "Black": '#212121',
-                        "Orange": '#f57c00',
-                        "Pink": '#e91e63'
+
+
+class Player_Column_Manager {
+    constructor() {
+        this.Player_Count = 0;
+        this.Players = [];
+    }
+
+    Get_New_Player_Info() {
+        this.Player_Name = document.getElementById("Player-Name-Input").value;
+        this.Player_Color = document.querySelector('input[name="color"]:checked').value;
+    }
+
+    Add_Player() {
+        this.Get_New_Player_Info();
+        let Player_Temp = new Player_HTML(this.Player_Name, this.Player_Color, this.Player_Count);
+        Player_Temp.Main();
+        this.Players.push(Player_Temp);
+        this.Player_Count++;
+    }
+
+    Remove_Player(index) {
+        this.Players[index].Remove_Column();
+        this.Players.splice(index, 1);
+    }
+
+
+}
+
+const Player_Colors = { "red": '#d32f2f',
+                        "blue": '#1976d2',
+                        "green": '#388e3c',
+                        "yellow": '#FBC02D',
+                        "purple": '#7B1FA2',
+                        "black": '#212121',
+                        "orange": '#f57c00',
+                        "pink": '#e91e63'
                     };
 
 
 
 async function Import_Tech_Cards() {
     try {
-        const response = await fetch("Tech.json");
+        const response = await fetch("./Json/Tech.json");
         const data = await response.json();
         window.Tech_Cards = data;
         console.log(data); // Log the data
@@ -59,15 +80,28 @@ async function Import_Tech_Cards() {
     }
 };
 
-function Get_Add_Player_Info() {
-    const Player_Name = 
-        document.getElementById("Player-Name-Input").textContent;
-    const Player_Faction = "Temp";
+async function Import_Agenda_Cards() {
+    try {
+        const response = await fetch("./Json/Agendas.json");
+        const data = await response.json();
+        window.Agenda_Cards = data;
+        window.Agenda_Cards_Upper = Object.fromEntries(
+            Object.entries(window.Agenda_Cards).map(([key, value]) => [key.toUpperCase(), value])
+        );
+        console.log(data); // Log the data
+    } catch (error) {
+        console.error("Error loading JSON:", error);
+    }
 };
 
-function Add_Player() {
-    Get_Add_Player_Info();
-}; 
+function Display_Tech_Cards() {
+    if (window.Tech_Cards) {  // Ensure Tech_Cards is defined before using it
+        const Tech_HTML = new HTML_Text_Column();
+        Tech_HTML.Main();
+    } else {
+        console.error("Tech_Cards failed to load.");
+    }
+};
 
 
 
@@ -87,6 +121,12 @@ class Player_Tech_Btn {
         this.Tech_Btn.className = "Tech-Btn";
         this.Tech_Btn.classList.add(`Tech-Btn-${this.Color}`);
         this.Tech_Btn.classList.add(`Tech-Btn-Locked`);
+        // this.Tech_Btn.style.backgroundImage = 'url("./SVGs/bacteria.svg")';
+        this.Tech_Btn.style.mask = `url("./SVGs/${this.SVG_Name}.svg") no-repeat center`;
+    }
+
+    Make_Tech_Btn_An_Icon(Icon_Key) {
+        this.Icon = 7;
     }
 
     Unlock_Tech() {
@@ -270,9 +310,14 @@ class Player_HTML {
         this.Score = 0;
     }
 
+    Remove_Column() {
+        this.Parent.removeChild(this.Column);
+    }
+
     Add_Column() {
         this.Parent = document.getElementById("Player-Columns");
         this.Column = document.createElement("div");
+        this.Column.id = `Player-${this.Index}-Column`;
         this.Column.className = "Player-Column";
     }
 
@@ -412,7 +457,6 @@ class Player_HTML {
         } else {
             console.log("Player Parent is Null");
         }
-        
     } 
 }
 
@@ -427,7 +471,6 @@ const Strategy_Options = [
     { "Color": "#7B1FA2", "Text": 8 },
     { "Color": "#414141", "Text": "P"}
 ];
-//"#40405c"
 
 class Player_Strategy_Btn {
     constructor(parent, index) {
@@ -437,8 +480,6 @@ class Player_Strategy_Btn {
         this.Selected_Option = Strategy_Options[0];
         this.Main();
     }
-
-    
 
     Setup() {
         // document.getElementById(`Strat-Dropdown-Btn-${this.Index}`).addEventListener("click", () => {
@@ -605,19 +646,266 @@ class Sidebar {
         document.getElementById("Close-Sidebar-Btn").addEventListener('click', this.Toggle_Sidebar.bind(this));
     }
 
-    Setup_Add_Player_Btn() {
+    Setup_Sidebar_Add_Player_Btn() {
         document.getElementById("Side-Add-Player-Btn").addEventListener('click', this.Open_Add_Player_Panel.bind(this));
+    }
+
+    Setup_Sidebar_Remove_Player_Btn() {
+        document.getElementById("Side-Remove-Player-Btn").addEventListener('click', this.Remove_Player_Buffer.bind(this));
     }
 
     Setup_Close_Add_Player_Panel() {
         document.getElementById("Close-Add-Player-Btn").addEventListener('click', this.Toggle_Add_Player_Panel.bind(this));
     }
 
+    Setup_Add_Player_Btn() {
+        document.getElementById("Add-Player-Btn").addEventListener('click', this.Add_Player_Buffer.bind(this));
+    }
+
+    Setup_Agenda_Cards_Btn() {
+        document.getElementById("Side-Agenda-Cards-Btn").addEventListener('click', () => {
+            window.Card_Search.Set_To_Agendas();
+            window.Card_Search.Toggle_HTML();
+            this.Toggle_Sidebar();
+        });
+    }
+
+    Add_Player_Buffer() {
+        window.Player_Manager.Add_Player();
+    }
+
+    //Super cheap/lazy solution for now
+    //its a minor feature so it has low priority rn
+    Remove_Player_Buffer() {
+        let User_Remove_Index = prompt("1st Player: 0\n8th Player: 7\nSelect A Player To Remove:");
+        if(User_Remove_Index) {
+            window.Player_Manager.Remove_Player(User_Remove_Index);
+        };
+    }
+
     Setup() {
         this.Setup_Toggle();
-        this.Setup_Add_Player_Btn();
+        this.Setup_Sidebar_Add_Player_Btn();
+        this.Setup_Sidebar_Remove_Player_Btn();
         this.Setup_Close_Add_Player_Panel();
+        this.Setup_Add_Player_Btn();
+        this.Setup_Agenda_Cards_Btn();
     }
+}
+
+function filterKeys() {
+    const searchTerm = document.getElementById("Agenda-Search-Bar").value.toLowerCase();
+    const filteredKeys = Object.keys(window.Agenda_Cards).filter(key => key.startsWith(searchTerm));
+    
+    displayKeys(filteredKeys);
+}
+
+class Card_Search {
+    constructor() {
+        this.keyList = document.getElementById("Card-List");
+        this.Cards_Set = window.Agenda_Cards;
+        this.Keys = null;
+        this.Card_Type = "Agenda";
+        this.Setup();
+    }
+
+    Display_Card(type, Key) {
+        const Parent = document.getElementById("Card-Display-Container");
+        Parent.innerHTML = ''; //clear it first;
+        new Agenda_HTML(Parent, 0, Key);
+        this.Toggle_Bodies();
+    }
+
+    Make_Card_Btn(Key) {
+        const li = document.createElement("li");
+        const btn = document.createElement("button");
+        btn.textContent = Key;
+        li.appendChild(btn);
+        const Card_Type = this.Card_Type;
+        btn.addEventListener('click', () => {
+            this.Display_Card(Card_Type, Key);
+        });
+        return li;
+    }
+
+    //Have to make these buttons
+    Display_Keys(keys) {
+        this.keyList.innerHTML = ""; // Clear previous list
+        keys.forEach(key => {
+            const li = this.Make_Card_Btn(key);
+            this.keyList.appendChild(li);
+        });
+    }
+
+    Filter_Keys() {
+        const searchTerm = document.getElementById("Cards-Search-Bar").value.toUpperCase();
+        const filteredKeys = Object.keys(this.Cards_Lowered).filter(key => key.startsWith(searchTerm));
+        console.log(filteredKeys);
+        this.Display_Keys(filteredKeys);
+    }
+
+    Toggle_Bodies() {
+        document.getElementById("Main-Body-Display").classList.toggle("Hidden");
+        document.getElementById("Main-Body-Search").classList.toggle("Hidden");
+    }
+
+    Toggle_HTML() {
+        document.getElementById("Top-Card-Search").classList.toggle("Hidden");
+    }
+
+    Set_To_Agendas() {
+        this.Card_Type = "Agenda";
+        this.Cards_Set = window.Agenda_Cards;
+        this.Cards_Lowered = Object.fromEntries(
+            Object.entries(this.Cards_Set).map(([key, value]) => [key.toUpperCase(), value])
+        );
+        this.Filter_Keys();
+    }
+
+    Setup_Close_Btn() {
+        document.getElementById("Close-Card-Search-Btn").addEventListener('click', this.Toggle_HTML.bind(this));
+    }
+
+    Setup_Toggle_Btn() {
+        document.getElementById("Toggle-Card-Search-Btn").addEventListener('click', this.Toggle_Bodies.bind(this));
+    }
+
+    Setup() {
+        this.Set_To_Agendas();
+        this.Setup_Close_Btn();
+        this.Setup_Toggle_Btn();
+        document.getElementById("Cards-Search-Bar").addEventListener("keyup", this.Filter_Keys.bind(this));
+    }
+}
+
+// What this class to only make the HTML part
+class Agenda_HTML {
+    constructor(parent, index, key) {
+        this.Parent = parent;
+        this.Index = index;
+        this.Key = key;
+        this.Agenda_Obj = window.Agenda_Cards_Upper[key];
+        
+        this.Main();
+    }
+
+    Make_Container() {
+        this.Container = document.createElement("div");
+        this.Container.id = `Agenda-${this.Key}`;
+        const Type = this.Agenda_Obj["Type"];
+        this.Container.className = "Agenda-Container";
+        this.Container.classList.add(`Agenda-Container-${Type}`);
+    }
+
+    Make_Title_Box() {
+        this.Title = document.createElement("div");
+        this.Title.className = "Agenda-Title";
+        this.Title.classList.add("Agenda-Text");
+        this.Title.innerText = this.Key;
+        this.Container.appendChild(this.Title);
+    }
+
+    Make_Type_Box() {
+        this.Type = document.createElement("div");
+        this.Type.className = "Agenda-Type";
+        this.Type.classList.add("Agenda-Text");
+        this.Type.classList.add(this.Agenda_Obj["Type"]);
+        this.Type.innerText = this.Agenda_Obj["Type"];
+        this.Container.appendChild(this.Type);
+    }
+
+    Make_Marker() {
+        if(!this.Agenda_Obj["Needs_Marker"]) {
+            return null;
+        }
+        this.Marker = document.createElement("div");
+        this.Marker.className = "Agenda-Marker";
+        this.Container.appendChild(this.Marker);
+    }
+
+    Make_Main_Text_Container() {
+        this.Descript_Container = document.createElement("div");
+        this.Descript_Container.className = "Agenda-Text-Area";
+        this.Descript_Container.classList.add("Agenda-Text");
+        this.Container.appendChild(this.Descript_Container);
+    }
+
+    Make_Description_Header_Container() {
+        const Desc_Header_Container = document.createElement("div");
+        Desc_Header_Container.className = "Agenda-Desc-Header";
+        Desc_Header_Container.classList.add("Agenda-Text");
+        return Desc_Header_Container;
+    }
+
+    Make_Elect() {
+        this.Elect_Text = document.createElement("div");
+        this.Elect_Text.className = "Agenda-Elect-Header";
+        this.Elect_Text.classList.add("Agenda-Text");
+        this.Elect_Text.innerText = this.Agenda_Obj["Elect"];
+        this.Descript_Container.appendChild(this.Elect_Text);
+    }
+
+    Make_Header_For_Against(Title) {
+        const section_header = document.createElement("div");
+        section_header.className = "Agenda-Section-Header";
+        section_header.classList.add("Agenda-Text");
+        section_header.innerText = `${Title}:`;
+        this.Descript_Container.appendChild(section_header);
+    }
+
+    Make_Effect_Description(Title) {
+        const section_desc = document.createElement("div");
+        section_desc.className = "Agenda-Section-Desc";
+        section_desc.classList.add("Agenda-Text");
+        section_desc.innerText = this.Agenda_Obj[Title];
+        this.Descript_Container.appendChild(section_desc);
+    }
+
+    //Used for makeing both Law 'For' and 'Against' ideally
+    Make_Basic_Description_Section(Title) {
+        this.Make_Header_For_Against(Title);
+        this.Make_Effect_Description(Title);
+    }
+
+    Make_For_Against_Description() {
+        this.Make_Basic_Description_Section("For");
+        this.Make_Basic_Description_Section("Against");
+    }
+
+    Make_Custom_Descriptio_Layout() {
+        if(this.Agenda_Obj["Warning"]) {
+            this.Make_Effect_Description("Warning");
+        }
+        if(this.Agenda_Obj["Elect"] !== "") {
+            this.Make_Elect();
+        };
+        if(this.Agenda_Obj["For"]) {
+            this.Make_For_Against_Description();
+        } else if(this.Agenda_Obj["effect"]) {
+            this.Make_Effect_Description("effect");
+        }
+    }
+
+    //Make it so that if they press Pass it will prompt for a
+    //player to become the owner of the card.
+    Setup() {
+        const temp = 7
+    }
+
+
+    Main() {
+        this.Make_Container();
+        this.Make_Title_Box();
+        this.Make_Type_Box();
+        this.Make_Marker();
+        this.Make_Main_Text_Container();
+        this.Make_Custom_Descriptio_Layout();
+        this.Parent.appendChild(this.Container);
+    }
+
+    
+
+
 }
 
 

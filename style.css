@@ -220,6 +220,8 @@ body {
     width: 40%;
     height: 80%;
     border: none;
+    /* mask: url("./SVGs/bacteria.svg") no-repeat center; */
+    /* background-color: red; */
 }
 
 .Tech-Btn-Locked {
@@ -370,6 +372,20 @@ body {
     background-color: #212121d1;
 }
 
+.Top-Overlay {
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    width: 70%;
+    height: 90%;
+    background-color: #212121d1;
+}
+
 
 /* Add Player Style */
 .Add-Player-Input-Container {
@@ -502,7 +518,7 @@ body {
 
 
 
-#Add-Player-Footer {
+/* #Add-Player-Footer {
     position: absolute;
     bottom: 1%;
     width: 96%;
@@ -515,6 +531,25 @@ body {
 #Add-Player-Footer button {
     width: 10%;
     height: 80%;
+    border: none;
+    background-color: white;
+} */
+
+.Overlay-Footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: #121212d1;
+}
+
+.Overlay-Footer button {
+    width: 10%;
+    height: 80%;
+    margin: 1%;
     border: none;
     background-color: white;
 }
@@ -587,6 +622,202 @@ body {
     color: #f1f1f1;
 }
 
+/* Card Search */
+
+.Cards-Main-Body {
+    width: 100%;
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#Search-Bar-Container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+#Cards-Search-Bar {
+    width: 80%;
+    height: 5vh;
+}
+
+#Scrollable-List-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;       /* Removes default padding */
+    margin: 0;        /* Removes default margin */
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+#Card-List {
+    width: 80%;
+}
+
+#Card-List li {
+    padding: 2px;
+}
+
+#Card-List li button {
+    border: none;
+
+}
+
+/* Cards */
+.Agenda-Container {
+    width: 200px;
+    height: 300px;
+    /* Path to your image */
+    /* background-image: url('../SVGs/Agenda_Card.svg');  */
+    background-size: cover; /* Ensures the image fits the div */
+    background-position: center; /* Centers the image */
+    position: relative;
+    font-weight: bold;
+}
+
+/* 
+    Brain
+    https://fontawesome.com/icons/brain?f=classic&s=solid
+    Atom
+    https://fontawesome.com/icons/atom?f=classic&s=solid
+    Robot
+    https://fontawesome.com/icons/robot?f=classic&s=solid
+    1
+
+    Green:
+    syring/Bio-Stim: https://fontawesome.com/icons/syringe?f=classic&s=solid
+   bacteria/X-89: https://fontawesome.com/icons/bacterium?f=classic&s=solid 
+   flag/Dacxive: https://fontawesome.com/icons/flag?f=classic&s=solid
+
+   
+   Blue:
+   Antimass: https://fontawesome.com/icons/meteor?f=classic&s=solid
+
+   
+   
+   */
+
+.Agenda-Container-LAW {
+    background-image: url('../SVGs/Agenda_Card_Law.svg');
+}
+
+.Agenda-Container-DIRECTIVE {
+    background-image: url('../SVGs/Agenda_Card_Directive.svg');
+}
+
+
+.Agenda-Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-justify: center;
+    position: relative;
+    font:inherit;
+    font-size: 80%;
+    color: white;
+    top: 0px;
+    left: 10%;
+    width: 80%;
+    height: 21%;
+    /* background-color: rgba(255, 255, 255, 0.337); */
+}
+
+.Agenda-Type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-justify: center;
+    
+    font-size: 50%;
+    
+    
+    position: relative;
+    top: 0px;
+    left: 20%;
+    width: 60%;
+    height: 5%;
+    /* background-color: rgba(255, 60, 60, 0.337);  */
+}
+
+.LAW {
+    color: orange;
+}
+
+.DIRECTIVE {
+    color: yellow;
+}
+
+.Agenda-Text-Area {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 74%;
+    /* background-color: rgba(74, 0, 0, 0.458);  */
+}
+
+.Agenda-Marker {
+    display:inline;
+    position:absolute;
+    right: 3%;
+    top: 2%;
+    width: 6%;
+    height: 4%;
+    background-color: rgb(255, 0, 0);
+    background: none;
+}
+
+.Agenda-Text-Area {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+    left: 10%;
+    width: 80%;
+
+}
+
+.Agenda-Elect-Header {
+    color: black;
+    font-size: 1.5vh;
+    font-weight: bolder;
+    align-self: center;
+}
+
+.Agenda-Section-Desc {
+    color: black;
+    font-size: 1.3vh;
+    align-self: center;
+    font-weight: 400;
+}
+
+.Agenda-Section-Header {
+    color: black;
+    font-size: 1.5vh;
+    font-weight: bold;
+}
 
 
 

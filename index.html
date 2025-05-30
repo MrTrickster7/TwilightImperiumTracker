@@ -13,6 +13,7 @@
         <button id="Close-Sidebar-Btn">=</button>
         <button id="Side-Add-Player-Btn" class="Sidebar-Option">Add Player</button>
         <button id="Side-Remove-Player-Btn" class="Sidebar-Option">Remove Player</button>
+        <button id="Side-Agenda-Cards-Btn" class="Sidebar-Option">Agenda Cards</button>
     </div>
     <!-- This might get changed to be just a specific section -->
     <div id="Top-Main" class="Top">
@@ -45,11 +46,6 @@
         <div id="Pick-Color" class="Add-Player-Input-Container">
             <div class="Add-Player-Header">Select Color</div>
             <div id="Player-Color-Selector-Container">
-                <!-- <div class="Color-Option-Container">
-                    <label>
-                        <input type="radio" name="color" value="red" checked> Red
-                    </label>
-                </div> -->
                 <label>
                     <input type="radio" name="color" value="red" checked> Red
                 </label>
@@ -78,14 +74,36 @@
         </div>
         
         
-        <div id="Add-Player-Footer">
-            <button id="Close-Add-Player-Btn" class="Add-Player-Footer-Btn">Close</button>`
-            <button id="Add-Player-Btn" class="Add-Player-Footer-Btn">Add</button>    
+        <div id="Add-Player-Footer" class="Overlay-Footer">
+            <button id="Close-Add-Player-Btn">Close</button>`
+            <button id="Add-Player-Btn">Add</button>    
             
         </div>
     </div>
 
+    <!-- Eventually this will be used to search for -->
+    <!-- All Cards just use radio button to pick which -->
+    <!-- Or just by how you get here -->
+    <div id="Top-Card-Search" class="Top-Overlay">
+        <div id="Main-Body-Search" class="Cards-Main-Body">
+            <div id="Search-Bar-Container">
+                <input type="text" id="Cards-Search-Bar" placeholder="Search for a key..."  />
+            </div>
+            <div id="Scrollable-List-Container">
+                <ul id="Card-List"></ul>
+            </div>
+            
 
-    <div id="Top-Agendas" class="Top Hidden"></div>
+        </div>
+        <div id="Main-Body-Display" class="Cards-Main-Body Hidden">
+            <div id="Card-Display-Container">
+
+            </div>
+        </div>
+        <div class="Overlay-Footer">
+            <button id="Close-Card-Search-Btn" class="Footer-Btn">Close</button>
+            <button id="Toggle-Card-Search-Btn" class="Footer-Btn">Toggle</button>
+        </div>
+    </div>
 </body>
 </html>

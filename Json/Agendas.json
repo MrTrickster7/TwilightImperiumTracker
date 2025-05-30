@@ -1,0 +1,337 @@
+{
+  "Anti-Intellectual Revolution": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "After a player researches a technology, they must destroy 1 of their non-fighter ships.",
+    "Against": "At the start of the next strategy phase, each player chooses and exhausts 1 planet for each technology they own."
+  },
+  "Classified Document Leaks": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Scored Secret Objective",
+    "For": "When this agenda is revealed, if there are no scored secret objectives, discard this card and reveal another agenda. The elected secret objective becomes a public objective.",
+    "Against": "No effect."
+  },
+  "Committee Formation": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. Before players vote on an agenda that requires a player to be elected, the owner of this card may discard it to choose a player to be elected.",
+    "Against": "No effect."
+  },
+  "Conventions of War": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Players cannot use BOMBARDMENT against units on cultural planets.",
+    "Against": "Each player that voted 'Against' discards all of their action cards."
+  },
+  "Core Mining": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Hazardous Planet",
+    "For": "Attach this card to the elected hazardous planet's card. Then, destroy 1 infantry on the planet. The resource value of this planet is increased by 2.",
+    "Against": "No effect."
+  },
+  "Demilitarized Zone": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Cultural Planet",
+    "For": "Attach this card to the elected cultural planet's card. Then, destroy all units on that planet. Players cannot land, produce, or place units on this planet.",
+    "Against": "No effect."
+  },
+  "Enforced Travel Ban": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Alpha and beta wormholes have no effect during movement.",
+    "Against": "Destroy each PDS in or adjacent to a system that contains a wormhole."
+  },
+  "Executive Sanctions": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player can have a maximum of 3 action cards in their hand.",
+    "Against": "Each player discards 1 random action card from their hand."
+  },
+  "Fleet Regulations": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player cannot have more than 4 tokens in their fleet pool.",
+    "Against": "Each player places 1 command token from their reinforcements in their fleet pool."
+  },
+  "Holy Planet of Ixth": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Cultural Planet",
+    "For": "Attach this card to the elected cultural planet's card. The planet's owner gains 1 victory point. Units on this planet cannot use PRODUCTION. When a player gains control of this planet, they gain 1 victory point. When a player loses control, they lose 1 victory point.",
+    "Against": "No effect."
+  },
+  "Homeland Defense Act": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player can have any number of PDS units on planets they control.",
+    "Against": "No effect."
+  },
+  "Covert Legislation": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "The speaker draws an agenda card in secret and declares an outcome (For or Against). Players vote on the declared outcome without knowing the agenda. The agenda is then revealed and resolved as voted.",
+    "Against": "No effect."
+  },
+  "Incentive Program": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player may immediately research 1 technology.",
+    "Against": "Each player gains 1 trade good."
+  },
+  "Judicial Abolishment": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Law",
+    "For": "Discard the elected law from the game.",
+    "Against": "No effect."
+  },
+  "Minister of Commerce": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. After the owner replenishes commodities, they gain 1 trade good for each player who has one or more ships in a system that contains a planet the owner controls.",
+    "Against": "No effect."
+  },
+  "Minister of Exploration": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. After the owner gains control of a planet, they draw 1 card from the exploration deck that matches that planet’s trait.",
+    "Against": "No effect."
+  },
+  "Minister of Industry": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. After the owner produces units, they gain 1 trade good for each planet they control that has a resource value of 3 or more.",
+    "Against": "No effect."
+  },
+  "Minister of Peace": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. The owner may discard this card to prevent a player from activating a system that contains another player’s units.",
+    "Against": "No effect."
+  },
+  "Minister of Policy": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. The owner draws 1 action card at the start of each agenda phase.",
+    "Against": "No effect."
+  },
+  "Minister of Sciences": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. The owner may exhaust this card to ignore the prerequisites of 1 technology during the 'Research Technology' step.",
+    "Against": "No effect."
+  },
+  "Prophecy of Ixth": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. The owner may discard this card to draw 1 secret objective.",
+    "Against": "No effect."
+  },
+  "Regulated Drones Act": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Players cannot produce more than 2 fighter ships during a single PRODUCTION ability.",
+    "Against": "Each player discards 1 random action card."
+  },
+  "Representative Government": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Players cannot exhaust planets to cast votes during the agenda phase.",
+    "Against": "Each player gains 1 command token."
+  },
+  "Research Team: Biotic": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Industrial Planet",
+    "For": "Attach this card to the elected industrial planet’s card. The controller may exhaust this card to ignore 1 green technology prerequisite when researching technology.",
+    "Against": "No effect."
+  },
+  "Research Team: Cybernetic": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Industrial Planet",
+    "For": "Attach this card to the elected industrial planet’s card. The controller may exhaust this card to ignore 1 yellow technology prerequisite when researching technology.",
+    "Against": "No effect."
+  },
+  "Research Team: Propulsion": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Industrial Planet",
+    "For": "Attach this card to the elected industrial planet’s card. The controller may exhaust this card to ignore 1 blue technology prerequisite when researching technology.",
+    "Against": "No effect."
+  },
+  "Research Team: Warfare": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Hazardous Planet",
+    "For": "Attach this card to the elected hazardous planet’s card. The controller may exhaust this card to ignore 1 red technology prerequisite when researching technology.",
+    "Against": "No effect."
+  },
+  "Swords to Plowshares": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player destroys half of their infantry (rounded up) on each planet they control and gains 1 trade good for each unit destroyed.",
+    "Against": "Each player gains 1 infantry on each planet they control."
+  },
+  "Wormhole Reconstruction": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "All systems that contain a wormhole are adjacent to each other.",
+    "Against": "No effect."
+  },
+  "Ixthian Artifact": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player who voted For may destroy all units in Mecatol Rex and each system adjacent to Mecatol Rex. Then, each player who destroyed at least 1 unit this way gains 1 relic.",
+    "Against": "No effect."
+  },
+  "Publicize Weapon Schematics": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "War suns lose the SUSTAIN DAMAGE ability. Other players may ignore war sun technology prerequisites.",
+    "Against": "No effect."
+  },
+  "Shard of the Throne": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card and 1 victory point. When a player gains control of a legendary planet or a planet in a home system not owned by the owner of this card, that player gains this card and 1 victory point. When a player loses this card, they lose 1 victory point.",
+    "Against": "No effect."
+  },
+  "The Crown of Emphidia": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card and 1 victory point. When a player gains control of a legendary planet, they gain this card and 1 victory point. When a player loses this card, they lose 1 victory point.",
+    "Against": "No effect."
+  },
+  "Minister of War": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "For": "The elected player gains this card. The owner may perform an action to discard this card and remove 1 command token from a system on the game board.",
+    "Against": "No effect."
+  },
+  "Armed Forces Standardization": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player must destroy 1 infantry on each planet they control."
+  },
+  "Checks and Balances": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "The speaker loses their position. The player with the fewest victory points becomes the new speaker."
+  },
+  "Economic Equality": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player redistributes their trade goods so that all players have an equal number."
+  },
+  "Emergency Repairs": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player may repair all of their damaged units."
+  },
+  "Martial Law": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player must place 1 infantry on each planet they control."
+  },
+  "Public Execution": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player discards all of their action cards and cannot vote on the next agenda."
+  },
+  "Regulated Conscription": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player may place 1 infantry on each planet they control."
+  },
+  "Research Grant": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player may immediately research 1 technology."
+  },
+  "Articles of War": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player removes 1 command token from their fleet pool and returns it to their reinforcements."
+  },
+  "Construction Initiative": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player may place 1 PDS or 1 space dock on a planet they control."
+  },
+  "Economic Initiative": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "Each player who has at least 1 planet with a resource value of 3 or more gains 2 trade goods."
+  },
+  "Judicial Review": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Law",
+    "effect": "Discard the elected law from the game."
+  },
+  "Miscount Disclosed": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Warning" : "When this Agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck",
+    "Elect": "Elect Law",
+    "effect": "Discard this agenda and reveal another agenda from the agenda deck. Vote on that agenda instead."
+  },
+  "Seed of an Empire": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains 1 victory point."
+  },
+  "Senate Sanctuary": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Planet",
+    "effect": "The elected planet's controller attaches this card to the planet’s card. The influence value of this planet is increased by 2."
+  },
+  "Colonial Redistribution": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Planet",
+    "effect": "The elected planet's controller returns it to a neutral planet. Then, a player who voted For may place 2 infantry from their reinforcements on that planet."
+  }
+}
