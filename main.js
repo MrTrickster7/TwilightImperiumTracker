@@ -122,7 +122,7 @@ class Player_Tech_Btn {
         this.Tech_Btn.classList.add(`Tech-Btn-${this.Color}`);
         this.Tech_Btn.classList.add(`Tech-Btn-Locked`);
         // this.Tech_Btn.style.backgroundImage = 'url("./SVGs/bacteria.svg")';
-        this.Tech_Btn.style.mask = `url("./SVGs/${this.SVG_Name}.svg") no-repeat center`;
+        // this.Tech_Btn.style.mask = `url("./SVGs/${this.SVG_Name}.svg") no-repeat center`;
     }
 
     Make_Tech_Btn_An_Icon(Icon_Key) {
@@ -131,16 +131,16 @@ class Player_Tech_Btn {
 
     Unlock_Tech() {
         this.Tech_Btn.classList.remove(`Tech-Btn-Locked`);
-        this.Tech_Btn.classList.remove("Tech-Btn-Exaust");
+        this.Tech_Btn.classList.remove("Exausted");
     }
 
     Lock_Tech() {
-        this.Tech_Btn.classList.remove("Tech-Btn-Exaust");
+        this.Tech_Btn.classList.remove("Exausted");
         this.Tech_Btn.classList.add(`Tech-Btn-Locked`);
     }
 
     Exaust_Tech() {
-        this.Tech_Btn.classList.add("Tech-Btn-Exaust");
+        this.Tech_Btn.classList.add("Exausted");
         this.Tech_Btn.classList.remove(`Tech-Btn-Locked`);
     }
 
@@ -202,7 +202,6 @@ class HTML_Text_Column {
         const Main_Techs_Container = document.createElement("div");
         Main_Techs_Container.className = "Main-Techs-Container";
         Object.keys(this.Tech_Json).forEach(Color => {
-            console.log(Color);
             const Color_Section = this.Make_Tech_Color_Section(Color);
             Main_Techs_Container.appendChild(Color_Section);
         });
