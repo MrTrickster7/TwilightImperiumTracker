@@ -1,31 +1,43 @@
 {
 
-    "Red": ["Plasma Scoring",
-            "AI Development Algorithim", 
-            "Magen Defense Grid", 
-            "Self-Assembly Routines", 
-            "Duranium Armor", 
-            "Assault Cannon"],
+        "Red": ["Plasma Scoring",
+                "AI Development Algorithim", 
+                "Magen Defense Grid", 
+                "Self-Assembly Routines", 
+                "Duranium Armor", 
+                "Assault Cannon"],
 
-    "Yellow": ["Sarween Tools", 
-                "Scanlink Drone Network", 
-                "Graviton Laser System", 
-                "Predictive Intelligence", 
-                "Transit Diodes", 
-                "Integrated Economy"],
+        "Yellow": ["Sarween Tools", 
+                        "Scanlink Drone Network", 
+                        "Graviton Laser System", 
+                        "Predictive Intelligence", 
+                        "Transit Diodes", 
+                        "Integrated Economy"],
 
-    "Green": ["Psychoarchaeology", 
-                "Neural Motivator", 
-                "Bio-Stims", 
-                "Dacxive Animators", 
-                "Hyper Metabolism", 
-                "X-89 Bacterial Weapon"],
+        "Green": ["Psychoarchaeology", 
+                        "Neural Motivator", 
+                        "Bio-Stims", 
+                        "Dacxive Animators", 
+                        "Hyper Metabolism", 
+                        "X-89 Bacterial Weapon"],
 
-    "Blue": ["Antimass Deflectors", 
-            "Dark Energy Tap", 
-            "Gravity Drive", 
-            "Sling Relay", 
-            "Fleet Logistics", 
-            "Light/Wave Deflector"]
+        "Blue": ["Antimass Deflectors", 
+                "Dark Energy Tap", 
+                "Gravity Drive", 
+                "Sling Relay", 
+                "Fleet Logistics", 
+                "Light/Wave Deflector"],
+
+        "Units1": ["Warsun",
+                   "Dreadnot",
+                   "Cruiser",
+                   "Destroyer",
+                   "PDS"],
+        "Units2": ["Carrier",
+                   "Infintry",
+                   "Fighter",
+                   "SpaceDock"]
+
+
 
 }

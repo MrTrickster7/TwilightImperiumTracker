@@ -181,7 +181,7 @@ class Player_Tech_Btn {
         }
         
     }
-
+    //Change how Archlinux deals with multiple monitors
     Enable_Btn() {
         // this.Tech_Btn.addEventListener('click', this.Toggle_Btn.bind(this));
         this.Tech_Btn.addEventListener("click", (event) => {
@@ -270,13 +270,16 @@ class HTML_Text_Column {
 
 }
 
+//Might have been better to make all under that same thing
+//json file {"Row1": "Title": "Red", ["tech1", ...} }
 class Tech_HTML {
     constructor(Parent) {
         this.Parent = Parent;
         this.Main_Tech_Colors = ["Red", "Yellow", "Green", "Blue"];
+        this.Unit_Tech_Colors = ["Units1", "Units2"];
     }
 
-    Make_Button_Container(Color) {
+    Make_Button_Container() {
         const Tech_Btn_Container = document.createElement("div");
         Tech_Btn_Container.className = "Tech-Btns-Container";
         // if(Color == "Blue") { //this might not be nessicary
@@ -302,18 +305,15 @@ class Tech_HTML {
         return Tech_Color_Section;
     }
 
-    Make_Four_Tech_Color_Sections() {
+    Make_Four_Tech_Color_Sections(Parent) {
         const Main_Techs_Container = document.createElement("div");
         Main_Techs_Container.className = "Main-Techs-Container";
         this.Main_Tech_Colors.forEach(Color => {
             const Color_Section = this.Make_Tech_Color_Section(Color);
-            Main_Techs_Container.appendChild(Color_Section);
+            // Main_Techs_Container.appendChild(Color_Section);
+            Parent.appendChild(Color_Section);
         });
         return Main_Techs_Container;
-    }
-
-    Make_Unit_Upgrade_Tech_Section() {
-        return null;
     }
 
     Make_All_Techs_Container() {
@@ -322,11 +322,41 @@ class Tech_HTML {
         return Container;
     }
 
+    Make_Unit_Tech_Section(Row) {
+        const Tech_Color_Section = document.createElement("div");
+        Tech_Color_Section.className = "Tech-Color-Section";
+        // let Btn_Container = this.Make_Button_Container(i);
+
+        window.Tech_Icons_Path[Row].forEach( (Tech) => {
+            
+            //idk if passing the parent to this class was a good
+            //idea or not
+            
+            new Player_Tech_Btn("White", Tech_Color_Section, Tech); 
+        });
+            
+        return Tech_Color_Section;
+    }
+
+    Make_Unit_Upgrade_Tech_Sections(Parent) {
+        const Main_Techs_Container = document.createElement("div");
+        Main_Techs_Container.id = "Unit-Upgrade-Techs-Container";
+        Main_Techs_Container.className = "Main-Techs-Container";
+        this.Unit_Tech_Colors.forEach((Row) => {
+            const Color_Section = this.Make_Unit_Tech_Section(Row);
+            // Main_Techs_Container.appendChild(Color_Section);
+            Parent.appendChild(Color_Section);
+        });
+        return Main_Techs_Container;
+    }
+
     //Have to edit this for unit upgrades
     Make_Normal_Tech_Row() {
         const Container = this.Make_All_Techs_Container();
-        const Four_Main_Techs = this.Make_Four_Tech_Color_Sections();
-        Container.appendChild(Four_Main_Techs);
+        const Four_Main_Techs = this.Make_Four_Tech_Color_Sections(Container);
+        const Unit_Upgrade_Tech = this.Make_Unit_Upgrade_Tech_Sections(Container);
+        // Container.appendChild(Four_Main_Techs);
+        // Container.appendChild(Unit_Upgrade_Tech);
         return Container;
     }
 

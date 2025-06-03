@@ -1,0 +1,16 @@
+{
+    "Im expecting most of the rows to devolve into this format even if its a bit reduncant for tech":"",
+    "Row1": {
+        "Title": "Blue",
+        "Tech": {
+            "Gravity Drive": {
+                "Color":"Blue",
+                "Icon-Path": "./SVGs/Tech-Icons/Gravity-Drive-Icon.svg"
+            },
+            "Gravity Drive2": {
+                "Color":"Blue",
+                "Icon-Path": "./SVGs/Tech-Icons/Gravity-Drive-Icon.svg"
+            }
+        }
+    }
+}
