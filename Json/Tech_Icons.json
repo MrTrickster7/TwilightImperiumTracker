@@ -1,8 +1,31 @@
 {
 
-    "Red": ["Plasma Scoring", "AI Dev. Alg.", "Magen Defense Grid", "Self-Assembly", "Duranium Armor", "Assault Cannon"],
-    "Yellow": ["Sarween Tools", "Scanlink", "Gravition", "Predictive Intel.", "Transit Diodes", "Integrated Economy"],
-    "Green": ["Brain", "Psychoarchaeology", "Flag", "Syringe", "Hyper Metabolism", "Bacteria"],
-    "Blue": ["Rocket", "Dark Energy Tap", "Gravity Drive", "Sling Relay", "Fleet Logistics", "Light/Wave Deflector"]
+    "Red": ["Plasma Scoring",
+            "AI Development Algorithim", 
+            "Magen Defense Grid", 
+            "Self-Assembly Routines", 
+            "Duranium Armor", 
+            "Assault Cannon"],
+
+    "Yellow": ["Sarween Tools", 
+                "Scanlink Drone Network", 
+                "Graviton Laser System", 
+                "Predictive Intelligence", 
+                "Transit Diodes", 
+                "Integrated Economy"],
+
+    "Green": ["Psychoarchaeology", 
+                "Neural Motivator", 
+                "Bio-Stims", 
+                "Dacxive Animators", 
+                "Hyper Metabolism", 
+                "X-89 Bacterial Weapon"],
+
+    "Blue": ["Antimass Deflectors", 
+            "Dark Energy Tap", 
+            "Gravity Drive", 
+            "Sling Relay", 
+            "Fleet Logistics", 
+            "Light/Wave Deflector"]
 
 }

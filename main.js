@@ -20,8 +20,9 @@
 window.onload = async function() {
     window.resizeTo(1920, 1080);
     await Import_Tech_Cards();
-    Display_Tech_Cards();
+    // Display_Tech_Cards();
     await Import_Agenda_Cards();
+    await Import_Tech_Icons();
     
     window.Player_Manager = new Player_Column_Manager();
     window.Sidebar = new Sidebar();
@@ -80,6 +81,17 @@ async function Import_Tech_Cards() {
     }
 };
 
+async function Import_Tech_Icons() {
+    try {
+        const response = await fetch("./Json/Tech_Icons.json");
+        const data = await response.json();
+        window.Tech_Icons_Path = data;
+        console.log(data); // Log the data
+    } catch (error) {
+        console.error("Error loading JSON:", error);
+    }
+}
+
 async function Import_Agenda_Cards() {
     try {
         const response = await fetch("./Json/Agendas.json");
@@ -105,14 +117,26 @@ function Display_Tech_Cards() {
 
 
 
+//Unit Dimensions:
+//Dreadnots:
+//  Length: 55.23mm
+//  Front-Curve-Length: ~30.23mm
+//  Drop-Width: ~1.6mm
+//  Flat-Section-Length: 7mm
+//  Slante-Up-Length: 9mm
+// 
 
+//  Front Notches 1.7mm
+//  Notch-Spacing: ~9mm
+//  Max-Front-Curve-Width: 19mm
 
 class Player_Tech_Btn {
-    constructor(Color, Parent) {
+    constructor(Color, Parent, Icon_Path) {
         this.Color = Color;
         this.is_Unlocked = false;
         this.is_Used = false;
         this.Parent = Parent;
+        this.Icon_Path = Icon_Path.replace(/[ /]/g, '-');;
         this.Main();
     }
 
@@ -122,11 +146,10 @@ class Player_Tech_Btn {
         this.Tech_Btn.classList.add(`Tech-Btn-${this.Color}`);
         this.Tech_Btn.classList.add(`Tech-Btn-Locked`);
         // this.Tech_Btn.style.backgroundImage = 'url("./SVGs/bacteria.svg")';
-        // this.Tech_Btn.style.mask = `url("./SVGs/${this.SVG_Name}.svg") no-repeat center`;
-    }
-
-    Make_Tech_Btn_An_Icon(Icon_Key) {
-        this.Icon = 7;
+        // this.Tech_Btn.style.mask = `url("./SVGs/bacteria.svg") no-repeat center`;
+        //Add something to handle/skip this if Icon_paht is undifined/not given
+        this.Tech_Btn.style.mask = `url("./SVGs/Tech-Icons/${this.Icon_Path}-Icon.svg") no-repeat center`;
+        this.Tech_Btn.style.maskSize = 'contain';
     }
 
     Unlock_Tech() {
@@ -160,8 +183,17 @@ class Player_Tech_Btn {
     }
 
     Enable_Btn() {
-        this.Tech_Btn.addEventListener('click', this.Toggle_Btn.bind(this));
+        // this.Tech_Btn.addEventListener('click', this.Toggle_Btn.bind(this));
+        this.Tech_Btn.addEventListener("click", (event) => {
+            this.Tech_Btn.classList.toggle("Tech-Btn-Locked");
+        });
+        this.Tech_Btn.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+            this.Tech_Btn.classList.toggle("Exausted");
+        });
     }
+
+
 
     Main() {
         this.Make_Tech_Btn();
@@ -244,25 +276,29 @@ class Tech_HTML {
         this.Main_Tech_Colors = ["Red", "Yellow", "Green", "Blue"];
     }
 
-    Make_Button_Container(i) {
+    Make_Button_Container(Color) {
         const Tech_Btn_Container = document.createElement("div");
         Tech_Btn_Container.className = "Tech-Btns-Container";
-        if(i == 0) {
-            Tech_Btn_Container.classList.add("First-Tech-In-Section");
-        }
+        // if(Color == "Blue") { //this might not be nessicary
+        //I think I just need to change the css and remove this class
+        Tech_Btn_Container.classList.add("First-Tech-In-Section");
+        // }
         return Tech_Btn_Container;
     }
 
     Make_Tech_Color_Section(Color) {
         const Tech_Color_Section = document.createElement("div");
         Tech_Color_Section.className = "Tech-Color-Section";
-        for(let i=0; i<6; i++) {
-            let Btn_Container = this.Make_Button_Container(i);
+        // let Btn_Container = this.Make_Button_Container(i);
+
+        window.Tech_Icons_Path[Color].forEach( (Tech) => {
+            
             //idk if passing the parent to this class was a good
             //idea or not
-            new Player_Tech_Btn(Color, Btn_Container); 
-            Tech_Color_Section.appendChild(Btn_Container);
-        };
+            
+            new Player_Tech_Btn(Color, Tech_Color_Section, Tech); 
+        });
+            
         return Tech_Color_Section;
     }
 
