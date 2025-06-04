@@ -37,6 +37,171 @@
         }
     },
     "Secret": {
-        "Temp": "Temp"
-    }     
+        "Seize An Icon": {
+            "Type": "status phase",
+            "Desc": "Control a legendary planet."
+        },
+        "Stake your Claim": {
+            "Type": "status phase",
+            "Desc": "Control a planet in a system that contains a planet controlled by another player."
+        },
+        "Demonstrate Your Power": {
+            "Type": "status phase",
+            "Desc": "Have 3 or more non-fighter ships in the active system at the end of a space combat."
+        },
+
+
+
+
+
+        "The Rest Of These Are Probably Wrong": {
+            "Type": "status phase",
+            "Desc": "Control six systems."
+        },
+        "Expand Borders": {
+            "Type": "status phase",
+            "Desc": "Control six planets in non-home systems."
+        },
+        "Form a Spy Network": {
+            "Type": "status phase",
+            "Desc": "Have 5 action cards in your hand."
+        },
+        "Gather a Mighty Fleet": {
+            "Type": "status phase",
+            "Desc": "Have 5 dreadnoughts on the game board."
+        },
+        "Lead from the Front": {
+            "Type": "status phase",
+            "Desc": "Have 4 mechs on different planets."
+        },
+        "Make History": {
+            "Type": "status phase",
+            "Desc": "Control Mecatol Rex and have at least 3 ships in its system."
+        },
+        "Master the Laws": {
+            "Type": "status phase",
+            "Desc": "Have 3 or more laws in play."
+        },
+        "Monopolize Production": {
+            "Type": "status phase",
+            "Desc": "Have 8 production in one system."
+        },
+        "Occupy the Fringe": {
+            "Type": "status phase",
+            "Desc": "Control a planet that is in a system adjacent to an anomaly."
+        },
+        "Protect the Border": {
+            "Type": "status phase",
+            "Desc": "Have a space dock in a system that contains a planet you control that is adjacent to a planet another player controls."
+        },
+        "Prove Endurance": {
+            "Type": "status phase",
+            "Desc": "Have units in the wormhole nexus."
+        },
+        "Raise a Fleet": {
+            "Type": "status phase",
+            "Desc": "Have 3 space docks on the game board."
+        },
+        "Rule Distant Lands": {
+            "Type": "status phase",
+            "Desc": "Control a planet that is in a system that is not adjacent to your home system."
+        },
+        "Sway the Council": {
+            "Type": "agenda phase",
+            "Desc": "Be elected by a law or have a planet you control be elected by a law."
+        },
+        "Turn Their Fleets to Dust": {
+            "Type": "action phase",
+            "Desc": "Destroy 2 ships belonging to another player in a single space combat."
+        },
+        "Unify the Colonies": {
+            "Type": "status phase",
+            "Desc": "Control 4 cultural planets."
+        },
+        "Unify the Industry": {
+            "Type": "status phase",
+            "Desc": "Control 4 industrial planets."
+        },
+        "Unify the Hinterlands": {
+            "Type": "status phase",
+            "Desc": "Control 4 hazardous planets."
+        },
+        "Unveil Flagship": {
+            "Type": "action phase",
+            "Desc": "Win a space combat in a system that contains your flagship."
+        },
+        "Wield Core Influence": {
+            "Type": "status phase",
+            "Desc": "Control planets that have a combined influence value of at least 12."
+        },
+        "Wield Core Resources": {
+            "Type": "status phase",
+            "Desc": "Control planets that have a combined resource value of at least 12."
+        },
+        "Become the Gatekeeper": {
+            "Type": "status phase",
+            "Desc": "Control both an alpha and a beta wormhole."
+        },
+        "Defy Space and Time": {
+            "Type": "status phase",
+            "Desc": "Have a unit in the wormhole nexus."
+        },
+        "Forge an Alliance": {
+            "Type": "status phase",
+            "Desc": "Have a promissory note in your play area that was not dealt to you."
+        },
+        "Develop Weaponry": {
+            "Type": "status phase",
+            "Desc": "Own 2 faction technologies."
+        },
+        "Diversify Research": {
+            "Type": "status phase",
+            "Desc": "Own 2 technologies in each of 2 colors."
+        },
+        "Engineer a Marvel": {
+            "Type": "status phase",
+            "Desc": "Have 4 PDS units on the game board."
+        },
+        "Establish Hegemony": {
+            "Type": "status phase",
+            "Desc": "Be neighbors with all other players."
+        },
+        "Raise a Legion": {
+            "Type": "status phase",
+            "Desc": "Have 9 ground forces on a single planet that does not contain a space dock."
+        },
+        "Reclaim Ancient Monuments": {
+            "Type": "status phase",
+            "Desc": "Control 2 planets that each have a technology specialty."
+        },
+        "Revolutionize Warfare": {
+            "Type": "status phase",
+            "Desc": "Own 4 technologies of the same color."
+        },
+        "Scavenge Remnants": {
+            "Type": "status phase",
+            "Desc": "Have 2 relic fragments of the same type."
+        },
+        "Strengthen Bonds": {
+            "Type": "status phase",
+            "Desc": "Have all of your neighbors."
+        },
+        "Threaten Enemies": {
+            "Type": "status phase",
+            "Desc": "Control a planet in a system adjacent to another player's home system."
+        },
+        "Turn Their Worlds to Ashes": {
+            "Type": "action phase",
+            "Desc": "Use bombardment to destroy all infantry on a planet."
+        },
+        "Vanquish Their Armada": {
+            "Type": "action phase",
+            "Desc": "Destroy another player's flagship or war sun."
+        },
+        "Wipe Their Forces": {
+            "Type": "action phase",
+            "Desc": "Destroy all of another player's fighters in a single combat using anti-fighter barrage."
+        }
+    }
+ 
 }

@@ -1,6 +1,16 @@
 {
     "Arborec": {
         "Favorite-Color": ["Green", "Yellow", "Orange", "Black", "Red", "Blue", "Purple", "Pink"],
+        "Starting-Tech": ["Magen Defense Grid"],
+        "Commodity-Limit": 3,
+        "Starting-Units": {
+            "Carrier": 1,
+            "Cruiser": 1,
+            "Fighter": 2,
+            "Infantry": 4,
+            "Space-Dock": 1,
+            "PDS": 1
+        },
         "Icon-Path": "",
         "Faction-Abilities": {
             "Mitosis": "Your space docks cannot produce infantry.  At the start of the status phase, place 1 infantry from your reinforcements on any planet you control."
