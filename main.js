@@ -350,6 +350,18 @@ class Tech_HTML {
         return Main_Techs_Container;
     }
 
+    Make_Faction_Tech_Section(Parent) {
+        const Main_Techs_Container = document.createElement("div");
+        Main_Techs_Container.id = "Unit-Upgrade-Techs-Container";
+        Main_Techs_Container.className = "Main-Techs-Container";
+        this.Unit_Tech_Colors.forEach((Row) => {
+            const Color_Section = this.Make_Unit_Tech_Section(Row);
+            // Main_Techs_Container.appendChild(Color_Section);
+            Parent.appendChild(Color_Section);
+        });
+        return Main_Techs_Container;
+    }
+
     //Have to edit this for unit upgrades
     Make_Normal_Tech_Row() {
         const Container = this.Make_All_Techs_Container();
@@ -559,7 +571,6 @@ class Player_Strategy_Btn {
         });
 
         this.Btn.addEventListener("click", () => {
-            console.log("Toggle Show");
             this.Dropdown_Container.classList.toggle("show");
         });
 
@@ -576,6 +587,7 @@ class Player_Strategy_Btn {
     Update_Option() {
         this.Btn.style.backgroundColor = this.Selected_Option.Color;
         this.Btn.innerText = this.Selected_Option.Text;
+        this.Btn.classList.remove("Exausted");
         this.Close_Dropdown();
     }
 
@@ -591,17 +603,17 @@ class Player_Strategy_Btn {
         this.Btn = document.createElement('button');
         this.Btn.id = `Strat-Dropdown-Btn-${this.Index}`;
         this.Btn.className = "Strategy-Dropdown-Btn";
-        this.Btn.classList.add("dropdown-btn");
+        // this.Btn.classList.add("dropdown-btn");
     }
 
     Make_Dropdown_Content() {
         this.Dropdown_Content = document.createElement("div");
         this.Dropdown_Content.className = "Strat-Dropdown-Content";
-        this.Dropdown_Content.classList.add("dropdown-container");
+        // this.Dropdown_Content.classList.add("dropdown-container");
         Strategy_Options.forEach( Opt => {
             let Div = document.createElement('div');
             Div.className = 'Strat-Dropdown-Option';
-            Div.classList.add("dropdown-option");
+            // Div.classList.add("dropdown-option");
             Div.innerText = Opt.Text;
             Div.style.backgroundColor = Opt.Color;
             Div.addEventListener('click', () => {
@@ -637,6 +649,10 @@ class Speaker_Token_Btn {
 
     Setup() {
         this.Speaker_Btn.addEventListener('click', () => {
+            // let Btns = document.querySelectorAll(".Speaker-Token-Btn");
+            // Btns.forEach((Btn) => {
+            //     this.
+            // });
             this.Toggle_Speaker_Img();
         });
     }
