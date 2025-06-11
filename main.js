@@ -379,6 +379,58 @@ class Tech_HTML {
 
 }
 
+class Planets_Total_HTML {
+    constructor(parent) {
+        this.Parent = parent;
+        this.Main();
+    }
+
+    Make_Player_Row_Container() {
+        let Container = document.createElement("div");
+        Container.className = "Main-Text-Row";
+        return Container;
+    }
+
+    Make_Dividor() {
+        let Div = document.createElement("div");
+        Div.className = "Dividor";
+        Div.textContent = "/";
+        return Div;
+    }
+
+    //This will go into my basic generic class that stuff will
+    //us as a parent
+    General_Input_With_Background(Class) {
+        let Input = document.createElement("input");
+        Input.type = "text";
+        Input.placeholder= "0";
+        Input.className = "Basic-Background-Input";
+        Input.classList.add(Class)
+        return Input
+    }
+
+    Make_Row() {
+        const Container = this.Make_Player_Row_Container();
+        const Dividor = this.Make_Dividor();
+        let Resource_Input = this.General_Input_With_Background("Planet-Resource-Input");
+        Resource_Input.classList.add("Planet-Total");
+        let Influence_Input = this.General_Input_With_Background("Planet-Influence-Input");
+        Influence_Input.classList.add("Planet-Total");
+        Container.appendChild(Resource_Input);
+        Container.appendChild(Dividor);
+        Container.appendChild(Influence_Input);
+        return Container;
+    }
+
+    Main() {
+        const Row = this.Make_Row();
+        this.Parent.appendChild(Row);
+    }
+
+
+
+}
+
 class Player_HTML {
     constructor(Name, Color, Index) {
         this.Name = Name;
@@ -523,12 +575,17 @@ class Player_HTML {
         this.Column.appendChild(Div);
     }
 
+    Add_Planet_Total_Row() {
+        new Planets_Total_HTML(this.Column);
+    }
+
     Main() {
         this.Add_Column();
         this.Add_Player_Color_Name();
         this.Add_Turn_Info_Row();
         this.Add_Score_Row();
         this.Add_Tech_Row();
+        this.Add_Planet_Total_Row();
         if(this.Parent) {
             this.Parent.appendChild(this.Column);
         } else {
@@ -701,6 +758,8 @@ class Speaker_Token_Btn {
 
     
 }
+
+
 
 class Sidebar {
     constructor() {
@@ -983,12 +1042,45 @@ class Agenda_HTML {
         this.Make_Custom_Descriptio_Layout();
         this.Parent.appendChild(this.Container);
     }
-
-    
-
-
 }
 
 
+class  Pub_Obj {
+    constructor(parent, index, key) {
+        this.Parent = parent;
+        this.Index = index;
+        this.Key = key;
+        this.Agenda_Obj = window.Agenda_Cards_Upper[key];
+        
+        this.Main();
+    }
+
+
+    Make_Container() {
+        this.Container = document.createElement("div");
+        this.Container.id = `Agenda-${this.Key}`;
+        const Type = this.Agenda_Obj["Type"];
+        this.Container.className = "Agenda-Container";
+        this.Container.classList.add(`Agenda-Container-${Type}`);
+    }
+
+    Make_Title_Box() {
+        this.Title = document.createElement("div");
+        this.Title.className = "Agenda-Title";
+        this.Title.classList.add("Agenda-Text");
+        this.Title.innerText = this.Key;
+        this.Container.appendChild(this.Title);
+    }
+
+    Make_Type_Box() {
+        this.Type = document.createElement("div");
+        this.Type.className = "Agenda-Type";
+        this.Type.classList.add("Agenda-Text");
+        this.Type.classList.add(this.Agenda_Obj["Type"]);
+        this.Type.innerText = this.Agenda_Obj["Type"];
+        this.Container.appendChild(this.Type);
+    }   
+
+}
 
 

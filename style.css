@@ -774,6 +774,7 @@ li {
 
 .Pub-Obj-1 {
     background-image: url('SVGs/PubObj.png');
+    background-image: url('./SVGs/Icons/Online-Icons-Converted/Generic-Icons/Ressources\ bg.svg')
 }
 
 
@@ -875,6 +876,60 @@ li {
     padding-top: 5%;
 }
 
+
+
+
+/* Planet Resources */
+.Basic-Background-Input {
+    /* border: 5px solid green; */
+    border: none;
+    background-color: var(--background-color);
+    /* background-image: url("../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Influence bg.svg"); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    text-justify: center;
+    color: white;
+    font-size: 20px;
+    /* width: 100%; */
+    /* height: 100%; */
+    outline: none;
+    /* background: none; */
+    /* mask: url("../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Influence bg.svg") no-repeat center; */
+    /* mask-size: contain; */
+    /* position: relative; */
+    /* left: 0px;
+    top: 0px; */
+    /* margin-top: -100%; */
+    /* margin-left: -100%; */
+}
+.Basic-Background-Input:active {
+    border: none;
+}
+
+.Basic-Background-Input:focus {
+    border: none;
+}
+
+.Dividor {
+    color: white;
+    font-size: 40px;
+}
+
+.Planet-Resource-Input {
+    
+    background-image: url("../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Ressources bg.svg");
+}
+
+.Planet-Influence-Input {
+    background-image: url("../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Influence bg.svg");
+}
+
+.Planet-Total {
+    width: 30%;
+    height: 80%;
+}
 
 
 /* Stays at the bottom */
