@@ -24,17 +24,27 @@ window.onload = async function() {
     await Import_Agenda_Cards();
     await Import_Tech_Icons();
     
-    window.Player_Manager = new Player_Column_Manager();
+    window.Player_Manager = new Player_Manager();
     window.Sidebar = new Sidebar();
     window.Card_Search = new Card_Search();
 }
 
 
 
-class Player_Column_Manager {
+class Player_Manager {
     constructor() {
         this.Player_Count = 0;
         this.Players = [];
+        this.Setup();
+    }
+
+    Setup() {
+        document.addEventListener("auxclick", (event) => {
+            if(event.button === 1) {
+                event.preventDefault();
+                this.Next_Player_Turn();
+            }
+        });
     }
 
     Get_New_Player_Info() {
@@ -53,6 +63,85 @@ class Player_Column_Manager {
     Remove_Player(index) {
         this.Players[index].Remove_Column();
         this.Players.splice(index, 1);
+    }
+
+    Get_Whos_Turn_It_Is() {
+        this.Current_Player = null;
+        this.Players.forEach((Player) => {
+            if(Player.Is_Active_Player()) {
+                this.Current_Player = Player;
+            }
+        });
+        
+    }
+
+    Get_Player_With_Fastest_Strat_Card() {
+        let closestPlayer = null;
+        let minValue = Infinity;
+
+        for (const player of this.Players) {
+            const stratCard = player.Get_Strat_Card?.();
+            console.log((player.Is_Passed() === false));
+            if (stratCard && stratCard !== "P" && !isNaN(stratCard) && Number.isInteger(Number(stratCard)) && !player.Is_Passed()) {
+                const playerValue = Number(stratCard);
+                if (playerValue < minValue) {
+                    minValue = playerValue;
+                    closestPlayer = player;
+                }
+            }
+        }
+        return closestPlayer;
+    }
+
+    Get_Next_Players_Turn() {
+        
+        // Validate input: return null if players array is invalid or empty
+        if (!Array.isArray(this.Players) || this.Players.length === 0) {
+            return null;
+        }
+        // If currentStratCard is null, find player with lowest valid strat card
+        if (this.Current_Player === null) {
+            return this.Get_Player_With_Fastest_Strat_Card();
+        }
+
+        let currentStratCard = this.Current_Player.Get_Strat_Card();
+
+        // Original logic for non-null currentStratCard
+        if (currentStratCard === "P" || 
+            isNaN(currentStratCard) || 
+            !Number.isInteger(Number(currentStratCard))) {
+            return null;
+        }
+
+        const currentValue = Number(currentStratCard);
+        let closestPlayer = null;
+        let minDifference = Infinity;
+
+        for (const player of this.Players) {
+            const stratCard = player.Get_Strat_Card?.();
+            if (stratCard && stratCard !== "P" && !isNaN(stratCard) && Number.isInteger(Number(stratCard)) && !player.Is_Passed()) {
+                const playerValue = Number(stratCard);
+                if (playerValue > currentValue && playerValue - currentValue < minDifference) {
+                    minDifference = playerValue - currentValue;
+                    closestPlayer = player;
+                }
+            }
+        }
+        if(closestPlayer === null) {
+            return this.Get_Player_With_Fastest_Strat_Card();
+        }
+
+        return closestPlayer;
+    }
+
+    Next_Player_Turn() {
+        this.Get_Whos_Turn_It_Is();
+        let Next_Player = this.Get_Next_Players_Turn();
+        
+        if(this.Current_Player !== null) {
+            this.Current_Player.Deactivate_Player();
+        }
+        Next_Player.Activate_Player();
     }
 
 
@@ -132,11 +221,12 @@ function Display_Tech_Cards() {
 
 class Player_Tech_Btn {
     constructor(Color, Parent, Icon_Path) {
-        this.Color = Color;
+        this.Color = Color.replaceAll("_", '');
         this.is_Unlocked = false;
         this.is_Used = false;
         this.Parent = Parent;
-        this.Icon_Path = Icon_Path.replace(/[ /]/g, '-');;
+        this.Icon_Path = Icon_Path.replace(/[ /]/g, '-');
+        
         this.Main();
     }
 
@@ -275,8 +365,11 @@ class HTML_Text_Column {
 class Tech_HTML {
     constructor(Parent) {
         this.Parent = Parent;
-        this.Main_Tech_Colors = ["Red", "Yellow", "Green", "Blue"];
-        this.Unit_Tech_Colors = ["Units1", "Units2"];
+        this.Main_Tech_Colors = ["Red", "_Red_", 
+                                "Yellow", "_Yellow_",
+                                "Green",  "_Green_", 
+                                "Blue", "_Blue_"];
+        this.Unit_Tech_Colors = ["Units1", "Units2", "Units3"];
     }
 
     Make_Button_Container() {
@@ -298,7 +391,6 @@ class Tech_HTML {
             
             //idk if passing the parent to this class was a good
             //idea or not
-            
             new Player_Tech_Btn(Color, Tech_Color_Section, Tech); 
         });
             
@@ -308,7 +400,7 @@ class Tech_HTML {
     Make_Four_Tech_Color_Sections(Parent) {
         const Main_Techs_Container = document.createElement("div");
         Main_Techs_Container.className = "Main-Techs-Container";
-        this.Main_Tech_Colors.forEach(Color => {
+        this.Main_Tech_Colors.forEach( (Color) => {
             const Color_Section = this.Make_Tech_Color_Section(Color);
             // Main_Techs_Container.appendChild(Color_Section);
             Parent.appendChild(Color_Section);
@@ -453,6 +545,7 @@ class Player_HTML {
     Make_Color_Row_Div() {
         let Name_Color_Row = document.createElement("div");
         Name_Color_Row.className = "Main-Text-Row";
+        Name_Color_Row.classList.add("Name-Color-Row");
         return Name_Color_Row;
     }
 
@@ -472,10 +565,10 @@ class Player_HTML {
 
     Add_Player_Color_Name() {
         let Name_Color_Row = this.Make_Color_Row_Div();
-        let Name_Div = this.Make_Name_Div();
-        let Color_Div = this.Make_Color_Div();
-        Name_Color_Row.appendChild(Name_Div);
-        Name_Color_Row.appendChild(Color_Div);
+        this.Name_Div = this.Make_Name_Div();
+        this.Color_Div = this.Make_Color_Div();
+        Name_Color_Row.appendChild(this.Name_Div);
+        Name_Color_Row.appendChild(this.Color_Div);
         this.Column.appendChild(Name_Color_Row);
     }
 
@@ -569,28 +662,60 @@ class Player_HTML {
     }
 
     Add_Turn_Info_Row() {
-        let Div = this.Make_Turn_Info_Row_Container();
-        new Speaker_Token_Btn(Div);
-        let Dropdown = new Player_Strategy_Btn(Div, this.Index);
-        this.Column.appendChild(Div);
+        this.Speaker_Strat_Div = this.Make_Turn_Info_Row_Container();
+        new Speaker_Token_Btn(this.Speaker_Strat_Div);
+        this.Strat_Dropdown = new Player_Strategy_Btn(this.Speaker_Strat_Div, this.Index);
+        this.Column.appendChild(this.Speaker_Strat_Div);
     }
 
     Add_Planet_Total_Row() {
         new Planets_Total_HTML(this.Column);
     }
 
+    Activate_Player() {
+        this.Color_Div.classList.add("Expanded-Color");
+    }
+
+    Deactivate_Player() {
+        this.Color_Div.classList.remove("Expanded-Color");
+    }
+
+    Toggle_Activation_Of_Player() {
+        this.Color_Div.classList.toggle("Expanded-Color");
+    }
+
+    Is_Active_Player() {
+        return this.Color_Div.classList.contains("Expanded-Color");
+    }
+
+    Is_Passed(){
+        let Strat_Btn = this.Strat_Dropdown.Btn;
+        return Strat_Btn.textContent === "P";
+    }
+
+    Get_Strat_Card() {
+        return this.Strat_Dropdown.Held_Strat_Card;
+    }
+
+    
+
+
     Main() {
         this.Add_Column();
         this.Add_Player_Color_Name();
         this.Add_Turn_Info_Row();
         this.Add_Score_Row();
-        this.Add_Tech_Row();
         this.Add_Planet_Total_Row();
+        this.Add_Tech_Row();
         if(this.Parent) {
             this.Parent.appendChild(this.Column);
         } else {
             console.log("Player Parent is Null");
         }
+        this.Name_Div.addEventListener("contextmenu", function(event) {
+            event.preventDefault(); // Stops default browser right-click menu
+            this.Toggle_Activation_Of_Player();
+        }.bind(this));
     } 
 }
 
@@ -612,6 +737,7 @@ class Player_Strategy_Btn {
         this.Parent = parent;
         this.Is_Exhaust = false;
         this.Selected_Option = Strategy_Options[0];
+        this.Held_Strat_Card = Strategy_Options[0];
         this.Main();
     }
 
@@ -635,10 +761,22 @@ class Player_Strategy_Btn {
             event.preventDefault(); // Stops default browser right-click menu
             this.Btn.classList.toggle("Exausted");
         });
+
+        this.Btn.addEventListener("auxclick", (event) => {
+            if(event.button === 1) {
+                event.preventDefault();
+                event.stopPropagation();
+                this.Selected_Option = Strategy_Options[8];
+                this.Update_Option();
+            }
+        });
+
+
     }
 
     Close_Dropdown() {
         document.querySelector(".Strat-Dropdown-Container").classList.remove("show");
+        this.Dropdown_Container.classList.remove("show");
     }
 
     Update_Option() {
@@ -646,6 +784,9 @@ class Player_Strategy_Btn {
         this.Btn.innerText = this.Selected_Option.Text;
         this.Btn.classList.remove("Exausted");
         this.Close_Dropdown();
+        if(this.Selected_Option.Text !== "P") {
+            this.Held_Strat_Card = this.Selected_Option.Text;
+        }
     }
 
     
@@ -681,6 +822,10 @@ class Player_Strategy_Btn {
         });
     }
 
+    Is_Passed() {
+        return this.Btn.textContent === "P";
+    }
+
     Main() {
         this.Make_Dropdown_Container();
         this.Make_Button_Dropdown();
@@ -700,18 +845,27 @@ class Speaker_Token_Btn {
 
     constructor(Parent) {
         this.Parent = Parent;
-        this.is_Speaker = false;
         this.Main();
     }
 
     Setup() {
         this.Speaker_Btn.addEventListener('click', () => {
-            // let Btns = document.querySelectorAll(".Speaker-Token-Btn");
-            // Btns.forEach((Btn) => {
-            //     this.
-            // });
+            //Finds All Speaker Token Buttons
+            let Btns = document.querySelectorAll(".Speaker-Token-Btn");
+            // Remove the image from all buttons
+            Btns.forEach((Btn) => {
+                const existingImg = Btn.querySelector('img'); // Assuming Speaker_Img is an <img> element
+                if (existingImg) {
+                    Btn.removeChild(existingImg);
+                }
+            });
+            // Displays Speaker Token On active Button
             this.Toggle_Speaker_Img();
         });
+        this.Speaker_Btn.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+            this.Toggle_Speaker_Img();
+        })
     }
 
     Make_Cell_Container() {
@@ -732,17 +886,15 @@ class Speaker_Token_Btn {
     }
 
     Hide_Speaker_Img() {
-        this.is_Speaker = false;
         this.Speaker_Btn.removeChild(this.Speaker_Img);
     }
 
     Show_Speaker_Img() {
-        this.is_Speaker = true;
         this.Speaker_Btn.appendChild(this.Speaker_Img);
     }
 
     Toggle_Speaker_Img() {
-        if(this.is_Speaker) {
+        if(this.Speaker_Btn.querySelector('img')) {
             this.Hide_Speaker_Img();
         } else {
             this.Show_Speaker_Img();
