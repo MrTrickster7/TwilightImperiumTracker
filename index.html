@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TI4 UI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
 </head>
 <body>
     <button id="Open-Sidebar-Btn">=</button>
@@ -13,6 +12,7 @@
         <button id="Close-Sidebar-Btn">=</button>
         <button id="Side-Add-Player-Btn" class="Sidebar-Option">Add Player</button>
         <button id="Side-Remove-Player-Btn" class="Sidebar-Option">Remove Player</button>
+        <button id="Modify-Tech-Btn" class="Sidebar-Option">Tech</button>
         <button id="Side-Agenda-Cards-Btn" class="Sidebar-Option">Agenda Cards</button>
     </div>
     <!-- This might get changed to be just a specific section -->
@@ -34,8 +34,16 @@
     </div>
 
     
-    
+    <!-- Pop-up for Pick Tech -->
+    <div id="Modify-Tech-Top" class="Top-Overlay Hidden">
+        <div id="Player-Tech-Columns">
 
+        </div>
+        <div id="Add-Player-Footer" class="Overlay-Footer">
+            <button id="Close-Modify-Tech-Btn" class="Footer-Btn">Close</button>
+        </div>
+
+    </div>
 
 
 
@@ -76,9 +84,8 @@
         
         
         <div id="Add-Player-Footer" class="Overlay-Footer">
-            <button id="Close-Add-Player-Btn">Close</button>`
+            <button id="Close-Add-Player-Btn">Close</button>
             <button id="Add-Player-Btn">Add</button>    
-            
         </div>
     </div>
 
@@ -107,5 +114,6 @@
             <button id="Toggle-Card-Search-Btn" class="Footer-Btn">Toggle</button>
         </div>
     </div>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
