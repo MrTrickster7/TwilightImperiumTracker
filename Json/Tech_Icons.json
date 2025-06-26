@@ -1,24 +1,18 @@
 {
 
-        "Red": ["Plasma Scoring", "Magen Defense Grid", "Duranium Armor"],
+        "Red": ["Plasma Scoring", "Magen Defense Grid", "Duranium Armor", "AI Development Algorithim", "Self-Assembly Routines", "Assault Cannon"],
 
-        "_Red_": ["AI Development Algorithim", "Self-Assembly Routines", "Assault Cannon"],
 
-        "Yellow": ["Sarween Tools", "Graviton Laser System", "Transit Diodes"],
+        "Yellow": ["Sarween Tools", "Graviton Laser System", "Transit Diodes", "Scanlink Drone Network", "Predictive Intelligence", "Integrated Economy"],
 
-        "_Yellow_": ["Scanlink Drone Network", "Predictive Intelligence", "Integrated Economy"],
 
         "Green": ["Psychoarchaeology",
                         "Bio-Stims",
-                        "Hyper Metabolism"],
-
-        "_Green_": ["Neural Motivator", "Dacxive Animators", "X-89 Bacterial Weapon"],
+                        "Hyper Metabolism", "Neural Motivator", "Dacxive Animators", "X-89 Bacterial Weapon"],
 
         "Blue": ["Antimass Deflectors",
                 "Gravity Drive",
-                "Fleet Logistics"],
-
-        "_Blue_": ["Dark Energy Tap", "Sling Relay", "Light/Wave Deflector"],
+                "Fleet Logistics", "Dark Energy Tap", "Sling Relay", "Light/Wave Deflector"],
 
         "Units1": ["Warsun",
                    "Dreadnot",

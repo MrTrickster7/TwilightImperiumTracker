@@ -2,13 +2,15 @@ import { Speaker_Token_Btn } from "./Speaker_Token.js";
 import { Player_Strategy_Btn } from "./Startegy_Card.js";
 import { Planets_Total_HTML } from "./Planet_Total.js";
 import { Tech_HTML } from "./Tech_HTML.js";
+import { Modify_Tech_HTML } from  "./Tech_HTML.js";
 
 
-export class Player_HTML {
-    constructor(Name, Color, Index) {
+export class Sub_Player_HTML {
+    constructor(Name, Color, Index, Parent) {
         this.Name = Name;
         this.Color = Color;
         this.Index = Index;
+        this.Parent = Parent;
         this.Score = 0;
     }
 
@@ -17,10 +19,177 @@ export class Player_HTML {
     }
 
     Add_Column() {
-        this.Parent = document.getElementById("Player-Columns");
         this.Column = document.createElement("div");
         this.Column.id = `Player-${this.Index}-Column`;
         this.Column.className = "Player-Column";
+    }
+
+    Add_Player_Color_Name() {
+        this.Name_Row = new Name_Row(this.Name, this.Color, this.Column);
+    }
+
+
+    Append_Column() {
+        if(this.Parent) {
+            this.Parent.appendChild(this.Column);
+        } else {
+            console.log("Player Parent is Null");
+        }
+    }
+
+}
+
+
+export class Modify_Player_HTML extends Sub_Player_HTML {
+    constructor(Name, Color, Index) {
+        let Parent = document.getElementById("Player-Modify-Tech-Columns");
+        super(Name, Color, Index, Parent);
+        this.Main();
+
+    }
+
+    Add_Tech_Row() {
+        // let Modify_Tech_Parent = this.Tech_Modifier_Parent.querySelector(`#Player-${this.Index}-Column`).querySelector(".Tech-Row");
+        const Tech_Row_Class = new Tech_HTML(this.Column, this.Index);
+    }
+
+    
+
+    Main() {
+        this.Add_Column();
+        this.Column.id = this.Column.id + "-Modify";
+        this.Add_Player_Color_Name();
+        this.Add_Tech_Row();
+        this.Append_Column();
+    }
+
+    
+}
+
+
+
+
+export class Player_HTML {
+    constructor(Name, Color, Index) {
+        this.Name = Name;
+        this.Color = Color;
+        this.Index = Index;
+        this.Score = 0;
+        this.Tech_Modifier_Parent = document.getElementById("Player-Modify-Tech-Columns");
+        this.Parent = document.getElementById("Player-Columns");
+        this.Main();
+    }
+
+    Remove_Column() {
+        this.Parent.removeChild(this.Column);
+    }
+
+    Add_Column() {
+        this.Column = document.createElement("div");
+        this.Column.id = `Player-${this.Index}-Column`;
+        this.Column.className = "Player-Column";
+    }
+
+    Add_Player_Color_Name() {
+        this.Name_Row = new Name_Row(this.Name, this.Color, this.Column);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Add_Tech_Row() {
+        // let Modify_Tech_Parent = this.Tech_Modifier_Parent.querySelector(`#Player-${this.Index}-Column`).querySelector(".Tech-Row");
+        const Tech_Row_Class = new Modify_Tech_HTML(this.Column);
+        // Tech_Row_Class.Main();
+    }
+
+    
+
+    Make_Turn_Info_Row_Container() {
+        let Div = document.createElement('div');
+        Div.className = "Main-Text-Row";
+        return Div;
+    }
+
+    Add_Turn_Info_Row() {
+        this.Speaker_Strat_Div = this.Make_Turn_Info_Row_Container();
+        new Speaker_Token_Btn(this.Speaker_Strat_Div);
+        this.Strat_Dropdown = new Player_Strategy_Btn(this.Speaker_Strat_Div, this.Index);
+        this.Column.appendChild(this.Speaker_Strat_Div);
+    }
+
+    Add_Score_Row() {
+        this.Score_Counter = new Score_Counter_Row(this.Column);
+    }
+
+    Add_Planet_Total_Row() {
+        new Planets_Total_HTML(this.Column);
+    }
+
+    Activate_Player() {
+        this.Name_Row.Color_Div.classList.add("Expanded-Color");
+    }
+
+    Deactivate_Player() {
+        this.Name_Row.Color_Div.classList.remove("Expanded-Color");
+    }
+
+    Toggle_Activation_Of_Player() {
+        this.Name_Row.Color_Div.classList.toggle("Expanded-Color");
+    }
+
+    Is_Active_Player() {
+        return this.Name_Row.Color_Div.classList.contains("Expanded-Color");
+    }
+
+    Is_Passed(){
+        let Strat_Btn = this.Strat_Dropdown.Btn;
+        return Strat_Btn.textContent === "P";
+    }
+
+    Get_Strat_Card() {
+        return this.Strat_Dropdown.Held_Strat_Card;
+    }
+
+    Main() {
+        this.Add_Column();
+        this.Add_Player_Color_Name();
+        this.Add_Turn_Info_Row();
+        this.Add_Score_Row();
+        this.Add_Planet_Total_Row();
+        this.Add_Tech_Row();
+        if(this.Parent) {
+            this.Parent.appendChild(this.Column);
+        } else {
+            console.log("Player Parent is Null");
+        }
+        this.Name_Row.Name_Div.addEventListener("contextmenu", function(event) {
+            event.preventDefault(); // Stops default browser right-click menu
+            this.Toggle_Activation_Of_Player();
+        }.bind(this));
+    } 
+}
+
+class Name_Row {
+    constructor(name, color, parent) {
+        this.Name = name;
+        this.Color = color;
+        this.Parent = parent;
+        this.Add_Player_Color_Name();
     }
 
     Make_Color_Row_Div() {
@@ -50,9 +219,16 @@ export class Player_HTML {
         this.Color_Div = this.Make_Color_Div();
         Name_Color_Row.appendChild(this.Name_Div);
         Name_Color_Row.appendChild(this.Color_Div);
-        this.Column.appendChild(Name_Color_Row);
+        this.Parent.appendChild(Name_Color_Row);
     }
 
+}
+
+class Score_Counter_Row {
+    constructor(Parent) {
+        this.Parent = Parent;
+        this.Add_Score_Row();
+    }
 
     Make_Score_Row_Div() {
         let Score_Row_Div = document.createElement("div");
@@ -124,80 +300,13 @@ export class Player_HTML {
         let Score_Row = this.Make_Score_Row_Div();
         let Counter = this.Make_Counter_Div();
         Score_Row.appendChild(Counter);
-        this.Column.appendChild(Score_Row);
+        this.Parent.appendChild(Score_Row);
     }
 
-    Add_Tech_Row() {
-        const Tech_Row_Class = new Tech_HTML(this.Column);
-        Tech_Row_Class.Main();
-    }
-
-    Give_Speaker() {
-        const temp = 7; //Add something later for this
-    }
-
-    Make_Turn_Info_Row_Container() {
-        let Div = document.createElement('div');
-        Div.className = "Main-Text-Row";
-        return Div;
-    }
-
-    Add_Turn_Info_Row() {
-        this.Speaker_Strat_Div = this.Make_Turn_Info_Row_Container();
-        new Speaker_Token_Btn(this.Speaker_Strat_Div);
-        this.Strat_Dropdown = new Player_Strategy_Btn(this.Speaker_Strat_Div, this.Index);
-        this.Column.appendChild(this.Speaker_Strat_Div);
-    }
-
-    Add_Planet_Total_Row() {
-        new Planets_Total_HTML(this.Column);
-    }
-
-    Activate_Player() {
-        this.Color_Div.classList.add("Expanded-Color");
-    }
-
-    Deactivate_Player() {
-        this.Color_Div.classList.remove("Expanded-Color");
-    }
-
-    Toggle_Activation_Of_Player() {
-        this.Color_Div.classList.toggle("Expanded-Color");
-    }
-
-    Is_Active_Player() {
-        return this.Color_Div.classList.contains("Expanded-Color");
-    }
-
-    Is_Passed(){
-        let Strat_Btn = this.Strat_Dropdown.Btn;
-        return Strat_Btn.textContent === "P";
-    }
-
-    Get_Strat_Card() {
-        return this.Strat_Dropdown.Held_Strat_Card;
-    }
-
-    
 
 
-    Main() {
-        this.Add_Column();
-        this.Add_Player_Color_Name();
-        this.Add_Turn_Info_Row();
-        this.Add_Score_Row();
-        this.Add_Planet_Total_Row();
-        this.Add_Tech_Row();
-        if(this.Parent) {
-            this.Parent.appendChild(this.Column);
-        } else {
-            console.log("Player Parent is Null");
-        }
-        this.Name_Div.addEventListener("contextmenu", function(event) {
-            event.preventDefault(); // Stops default browser right-click menu
-            this.Toggle_Activation_Of_Player();
-        }.bind(this));
-    } 
+
+
 }
 
 

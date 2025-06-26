@@ -3,7 +3,7 @@ import { HTML_Text_Column } from './Player_Table_Text_Column.js';
 import { Sidebar } from './Sidebar.js';
 import { Card_Search } from './Card_Search.js';
 import { Player_HTML } from './Player_Column.js';
-
+import { Modify_Player_HTML } from './Player_Column.js';
 
 
 
@@ -17,6 +17,7 @@ window.onload = async function() {
     // Display_Tech_Cards();
     await Import_Agenda_Cards();
     await Import_Tech_Icons();
+    await Setup_All_Close_All_Overlays();
     
     window.Player_Manager = new Player_Manager();
     window.Sidebar = new Sidebar();
@@ -49,7 +50,7 @@ class Player_Manager {
     Add_Player() {
         this.Get_New_Player_Info();
         let Player_Temp = new Player_HTML(this.Player_Name, this.Player_Color, this.Player_Count);
-        Player_Temp.Main();
+        new Modify_Player_HTML(this.Player_Name, this.Player_Color, this.Player_Count);
         this.Players.push(Player_Temp);
         this.Player_Count++;
     }
@@ -150,6 +151,17 @@ window.Player_Colors = { "red": '#d32f2f',
                         "orange": '#f57c00',
                         "pink": '#e91e63'
                     };
+
+
+async function Setup_All_Close_All_Overlays() {
+    document.querySelectorAll(".Close-Overlay-Btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".Top-Overlay").forEach((overlay) => {
+                overlay.classList.add("Hidden");
+            });
+        });
+    });
+};
 
 
 

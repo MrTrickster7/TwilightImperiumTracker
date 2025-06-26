@@ -52,6 +52,20 @@ body {
     z-index: 100;
 }
 
+.Top-Overlay {
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    width: 70%;
+    height: 90%;
+    background-color: #212121d1;
+}
+
 #Top-Main {
     flex-direction: row;
     width: 100%;
@@ -93,6 +107,27 @@ body {
     width: 10%;
     border-right: 2px solid white; 
 }
+
+#Modify-Tech-Top {
+    width: 90%;
+    left: 5%;
+}
+
+#Player-Modify-Tech-Columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#Player-Modify-Tech-Columns .Player-Column {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    width: 15%;
+}
+
+
 
 .Player-Name {
     display: flex;
@@ -248,9 +283,17 @@ body {
     border-top: 1px solid var(--Minor-Dividors); 
 }
 
+.All-Tech-Container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
 .Tech-Btn {
-    width: 30%;
-    height: 80%;
+    width: 15%;
+    /* height: 80%; */
+    height: 5vh;
     border: none;
     /* mask: url("./SVGs/bacteria.svg") no-repeat center; */
     /* background-color: red; */
@@ -424,19 +467,7 @@ body {
     background-color: #212121d1;
 }
 
-.Top-Overlay {
-    position: fixed;
-    top: 5%;
-    left: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
 
-    width: 70%;
-    height: 90%;
-    background-color: #212121d1;
-}
 
 
 /* Add Player Style */

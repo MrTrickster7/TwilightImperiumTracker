@@ -1,3 +1,10 @@
+
+
+// Upper notch: 30.7 mm
+// Center Notch Width: 30.3 mm
+// Lower Notch: 29.77mm
+
+
 export class Player_Tech_Btn {
     constructor(Color, Parent, Icon_Path) {
         this.Color = Color.replaceAll("_", '');
@@ -14,6 +21,7 @@ export class Player_Tech_Btn {
         this.Tech_Btn.className = "Tech-Btn";
         this.Tech_Btn.classList.add(`Tech-Btn-${this.Color}`);
         this.Tech_Btn.classList.add(`Tech-Btn-Locked`);
+        // this.Tech_Btn.classList.add('Hidden');
         // this.Tech_Btn.style.backgroundImage = 'url("./SVGs/bacteria.svg")';
         // this.Tech_Btn.style.mask = `url("./SVGs/bacteria.svg") no-repeat center`;
         //Add something to handle/skip this if Icon_paht is undifined/not given
@@ -59,6 +67,36 @@ export class Player_Tech_Btn {
         this.Tech_Btn.addEventListener("contextmenu", (event) => {
             event.preventDefault();
             this.Tech_Btn.classList.toggle("Exausted");
+        });
+    }
+
+    //This should make it so that when this tech button is press
+    //it will reveal the same tech icon in the main screen for
+    //the player is button is assigned to
+
+    Get_Main_Btn(Index) {
+        const playerDiv = document.querySelector(`#Player-${Index}-Column .All-Tech-Container`);
+        if (!playerDiv) {
+        console.error(`Player div #Player-${Index}-Column .All-Tech-Container not found`);
+        return null;
+        }
+        console.log(playerDiv.querySelectorAll('button'));
+        const targetButton = Array.from(playerDiv.querySelectorAll('button')).find(btn => 
+        btn.style.mask === `url("./SVGs/Tech-Icons/${this.Icon_Path}-Icon.svg") center center / contain no-repeat`
+        );
+        let Main_Btn = targetButton || null;
+        return Main_Btn;
+    }
+
+    Make_Tech_Btn_The_Enabler(Index) {
+        //this is to make the button that this one is controlling off by default
+        //not the best place to put this, but its cleanish option for now.
+        // let parent = document.getElementById(`Player-${Index}-Column`);
+        let Main_Tech_Btn = this.Get_Main_Btn(Index);
+        Main_Tech_Btn.classList.add("Hidden"); 
+        this.Tech_Btn.addEventListener("click", (event) => {
+            Main_Tech_Btn.classList.toggle("Tech-Btn-Locked");
+            Main_Tech_Btn.classList.toggle("Hidden");
         });
     }
 

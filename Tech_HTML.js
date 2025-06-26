@@ -1,13 +1,80 @@
 import { Player_Tech_Btn } from './Tech_Btn.js';
 
-export class Tech_HTML {
+
+export class Modify_Tech_HTML {
     constructor(Parent) {
         this.Parent = Parent;
-        this.Main_Tech_Colors = ["Red", "_Red_", 
-                                "Yellow", "_Yellow_",
-                                "Green",  "_Green_", 
-                                "Blue", "_Blue_"];
+        this.Main_Tech_Colors = ["Red",
+                                "Yellow",
+                                "Green",
+                                "Blue"];
         this.Unit_Tech_Colors = ["Units1", "Units2", "Units3"];
+        this.Main();
+
+    }
+
+    Make_Button_Container() {
+        this.Tech_Btn_Container = document.createElement("div");
+        this.Tech_Btn_Container.className = "All-Tech-Container";
+        // if(Color == "Blue") { //this might not be nessicary
+        //I think I just need to change the css and remove this class
+        // this.Tech_Btn_Container.classList.add("First-Tech-In-Section");
+        // }
+    }
+
+
+    Make_All_Tech_Btns_Of_Color(Color) {
+        window.Tech_Icons_Path[Color].forEach( (Tech) => {
+            new Player_Tech_Btn(Color, this.Tech_Btn_Container, Tech);
+        });
+    }
+
+    Make_All_Unit_Upgrades(Units) {
+        window.Tech_Icons_Path[Units].forEach( (Tech) => {
+            new Player_Tech_Btn("White", this.Tech_Btn_Container, Tech);
+        });
+    }
+
+
+    Fill_Tech_Container() {
+        this.Main_Tech_Colors.forEach((Color) => {
+            this.Make_All_Tech_Btns_Of_Color(Color);
+        });
+        this.Unit_Tech_Colors.forEach((Color) => {
+            this.Make_All_Unit_Upgrades(Color);
+        });
+    }
+
+
+
+    Main() {
+        this.Make_Button_Container();
+        this.Fill_Tech_Container();
+        this.Parent.appendChild(this.Tech_Btn_Container);
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+export class Tech_HTML {
+    constructor(Parent, index) {
+        this.Parent = Parent
+        this.Index = index;
+        this.Main_Tech_Colors = ["Red", 
+                                "Yellow",
+                                "Green",
+                                "Blue"];
+        this.Unit_Tech_Colors = ["Units1", "Units2", "Units3"];
+        this.Main();
     }
 
     Make_Button_Container() {
@@ -29,7 +96,8 @@ export class Tech_HTML {
             
             //idk if passing the parent to this class was a good
             //idea or not
-            new Player_Tech_Btn(Color, Tech_Color_Section, Tech); 
+            let btn = new Player_Tech_Btn(Color, Tech_Color_Section, Tech);
+            btn.Make_Tech_Btn_The_Enabler(this.Index);
         });
             
         return Tech_Color_Section;
@@ -62,7 +130,8 @@ export class Tech_HTML {
             //idk if passing the parent to this class was a good
             //idea or not
             
-            new Player_Tech_Btn("White", Tech_Color_Section, Tech); 
+            let btn = new Player_Tech_Btn("White", Tech_Color_Section, Tech); 
+            btn.Make_Tech_Btn_The_Enabler(this.Index);
         });
             
         return Tech_Color_Section;

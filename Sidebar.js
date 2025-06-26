@@ -47,6 +47,13 @@ export class Sidebar {
         });
     }
 
+    Setup_Modify_Tech_Btn() {
+        document.getElementById("Modify-Tech-Btn").addEventListener('click', () => {
+            document.getElementById("Modify-Tech-Top").classList.remove("Hidden");
+            this.Toggle_Sidebar();
+        })
+    }
+
     Add_Player_Buffer() {
         window.Player_Manager.Add_Player();
     }
@@ -67,5 +74,6 @@ export class Sidebar {
         this.Setup_Add_Player_Btn();
         this.Setup_Agenda_Cards_Btn();
         this.Setup_Close_Add_Player_Panel();
+        this.Setup_Modify_Tech_Btn();
     }
 }
