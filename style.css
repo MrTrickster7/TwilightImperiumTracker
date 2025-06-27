@@ -24,7 +24,7 @@ html {
     height: 100%;
     width: 100%;
     color: white;
-    
+
 }
 
 body {
@@ -37,7 +37,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center; /*Maybe switch to baselien*/
+    align-content: center;
+    /*Maybe switch to baselien*/
 }
 
 
@@ -67,28 +68,41 @@ body {
 }
 
 #Top-Main {
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     height: 100%;
+}
+
+#Info-Table {
+    width: 80vw;
+    display: flex;
+    height:fit-content;
+
 }
 
 #Text-Column {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    /* height: 10%; */
+    /* height:fit-content; */
+    height:auto;
     width: 5%;
     color: white;
     border-left: 2px solid white;
     border-right: 2px solid white;
+    border-bottom: 1px solid white;
 }
 
 .Main-Text-Row {
     width: 100%;
-    height: 5%;
+    height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 2px solid white;
+    text-align: center;
+    text-justify: center;
+    
 }
 
 
@@ -96,16 +110,17 @@ body {
 #Player-Columns {
     display: flex;
     flex-direction: row;
-    height: 100%;
-    width: 80%;
+    /* height: 100%; */
+    width: 95%;
 }
 
 .Player-Column {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 10%;
-    border-right: 2px solid white; 
+    /* height: 100%;' */
+    width: 15%;
+    border-right: 2px solid white;
+    border-bottom: 1px solid white;
 }
 
 #Modify-Tech-Top {
@@ -117,7 +132,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
 }
 
@@ -144,13 +159,13 @@ body {
 }
 
 .Name-Color-Row {
-    position:relative;
+    position: relative;
 }
 
 .Player-Color {
     position: absolute;
     top: 10%;
-    right: 5%; 
+    right: 5%;
     width: 10%;
     height: 80%;
     background-color: white;
@@ -218,20 +233,23 @@ body {
 
 
 #Tech-Header-Row {
-    height: 80%;
+    /* height: 80%; */
     /* font-size: 1.5vh; */
-    border-top: 0px;
+    border-top: 1px solid white;
     color: white;
+    /* height: min-content; */
+    height: none;
 }
 
 #Text_Tech_All_Container {
     height: 100%;
     width: 100%;
+    
 }
 
 .All-Tech-Row {
     width: 100%;
-    height: 55%;
+    /* height: 55%; */
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -265,8 +283,8 @@ body {
     padding-top: 1px;
     padding-bottom: 1px;
     border-top: 1px solid var(--Minor-Dividors);
-    
-    
+
+
 }
 
 .Tech_Card_Text {
@@ -280,14 +298,16 @@ body {
 
     padding-left: 5px;
     font-size: 1.6vh;
-    border-top: 1px solid var(--Minor-Dividors); 
+    border-top: 1px solid var(--Minor-Dividors);
 }
 
 .All-Tech-Container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+    /* min-height: 10px; */
+    border-top: 2px solid white;
 }
 
 .Tech-Btn {
@@ -324,7 +344,7 @@ body {
 }
 
 .Tech-Btn-Purple {
-    background-color: var(--Purple); 
+    background-color: var(--Purple);
 }
 
 .Tech-Btn-White {
@@ -343,7 +363,8 @@ body {
 }
 
 .Tech-Btn:hover {
-    filter: brightness(1.2); /* Increase brightness by 20% */
+    filter: brightness(1.2);
+    /* Increase brightness by 20% */
 }
 
 .First-Tech-In-Section {
@@ -376,7 +397,7 @@ body {
 .Strat-Dropdown {
     position: relative;
     display: inline-block;
-    
+
 }
 
 /* Dropdown Content */
@@ -389,7 +410,7 @@ body {
     padding: 0px;
     text-align: center;
     background-color: white;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
 
@@ -472,7 +493,7 @@ body {
 
 /* Add Player Style */
 .Add-Player-Input-Container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: start;
@@ -577,24 +598,31 @@ body {
 #Player-Color-Selector-Container label input[value="red"]:checked::before {
     background-color: var(--Red);
 }
+
 #Player-Color-Selector-Container label input[value="orange"]:checked::before {
     background-color: var(--Orange);
 }
+
 #Player-Color-Selector-Container label input[value="yellow"]:checked::before {
     background-color: var(--Yellow);
 }
+
 #Player-Color-Selector-Container label input[value="green"]:checked::before {
     background-color: var(--Green);
 }
+
 #Player-Color-Selector-Container label input[value="blue"]:checked::before {
     background-color: var(--Blue);
 }
+
 #Player-Color-Selector-Container label input[value="purple"]:checked::before {
     background-color: var(--Purple);
 }
+
 #Player-Color-Selector-Container label input[value="pink"]:checked::before {
     background-color: var(--Pink);
 }
+
 #Player-Color-Selector-Container label input[value="black"]:checked::before {
     background-color: var(--Black);
 }
@@ -743,9 +771,12 @@ body {
 }
 
 ul {
-    list-style: none; /* Removes bullet points */
-    padding: 0;       /* Removes default padding */
-    margin: 0;        /* Removes default margin */
+    list-style: none;
+    /* Removes bullet points */
+    padding: 0;
+    /* Removes default padding */
+    margin: 0;
+    /* Removes default margin */
 }
 
 li {
@@ -778,11 +809,13 @@ li {
 
     /* Path to your image */
     /* background-image: url('../SVGs/Agenda_Card.svg');  */
-    background-size: cover; /* Ensures the image fits the div */
+    background-size: cover;
+    /* Ensures the image fits the div */
     background-size: contain;
     background-repeat: no-repeat;
 
-    background-position: center; /* Centers the image */
+    background-position: center;
+    /* Centers the image */
     position: relative;
     font-weight: bold;
 }
@@ -811,7 +844,7 @@ li {
 
 .Agenda-Container-LAW {
     background-image: url('../SVGs/Agenda_Card_Law.svg');
-    
+
 }
 
 .Agenda-Container-DIRECTIVE {
@@ -831,8 +864,10 @@ li {
     text-align: center;
     text-justify: center;
     position: relative;
-    font:inherit;
-    font-size: 50px;
+    font: inherit;
+    /* font-size: 50px; */
+    font-size: calc(2.5cqw);
+    line-height: calc(2.5cqw);
     color: white;
     top: 0px;
     left: 10%;
@@ -847,10 +882,12 @@ li {
     align-items: center;
     text-align: center;
     text-justify: center;
-    
-    font-size: 30px;
-    
-    
+
+    /* font-size: 30px; */
+    font-size: calc(1.5cqw);
+    line-height: calc(1.5cqw);
+
+
     position: relative;
     top: 0px;
     left: 20%;
@@ -877,8 +914,8 @@ li {
 }
 
 .Agenda-Marker {
-    display:inline;
-    position:absolute;
+    display: inline;
+    position: absolute;
     right: 3%;
     top: 2%;
     width: 6%;
@@ -908,18 +945,78 @@ li {
 
 .Agenda-Section-Desc {
     color: black;
-    font-size: 50px;
+    /* font-size: 50px; */
+    font-size: calc(1.5cqw);
+    line-height: calc(1.5cqw);
+
     align-self: center;
-    line-height:normal;
+    line-height: normal;
     font-weight: 400;
     padding-top: 5%;
 }
 
 .Agenda-Section-Header {
     color: black;
-    font-size: 60px;
+    /* font-size: 60px; */
     font-weight: bold;
+    font-size: calc(2cqw);
+    line-height: calc(2cqw);
     padding-top: 5%;
+}
+
+#Public-Obj-Table {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: #1976d2;
+}
+
+.Public-Obj-Row {
+    margin-top: 10%;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    background-color: #7B1FA2;
+}
+
+.Scoreable-Obj-Container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    background-color:#388e3c;
+}
+
+.Scoreable-Icon-Container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    background-color: #d32f2f;
+}
+
+.Tracker-Btn {
+    height: 30%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Tracker-Btn img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0.5);
 }
 
 
@@ -950,6 +1047,7 @@ li {
     /* margin-top: -100%; */
     /* margin-left: -100%; */
 }
+
 .Basic-Background-Input:active {
     border: none;
 }
@@ -964,7 +1062,7 @@ li {
 }
 
 .Planet-Resource-Input {
-    
+
     background-image: url("../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Ressources bg.svg");
 }
 
@@ -984,11 +1082,10 @@ li {
     color: white;
 }
 
+.Scored {
+    filter: brightness(1) !important;
+}
+
 .Hidden {
     display: None !important;
 }
-
-
-
-
-

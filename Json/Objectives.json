@@ -1,53 +1,209 @@
 {
     "Public": {
         "1 Point": {
-            "Corner the Market": "Control 4 planets that each have the same planet trait.",
-            "Diversify Research": "Own 2 technologies in each of 2 colors",
-            "Develop Weaponry": "Own 2 unit upgrade technologies",
-            "Erect a Monument": "Spend 8 resources",
-            "Expand Borders": "Control 6 planets in non-home systems.",
-            "Found Research Outpost": "Control 3 planets that have technology specialties",
-            "Intimidate Council": "Have 1 or more ships in 2 systems that are adjacent to Mecatol Rex's System.",
-            "Lead from the Front": "Spend a total of 3 tokens from your tactic and/or strategy pools",
-            "Negotiate Trade Routes": "Spend 5 trade goods.",
-            "Sway the Council": "Spend 8 influence.",
+            "Corner the Market": {
+                "Title": "Corner the Market",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Control 4 planets that each have the same planet trait."
+            },
+            "Diversify Research": {
+                "Title": "Diversify Research",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Own 2 technologies in each of 2 colors"
+            },
+            "Develop Weaponry": {
+                "Title": "Develop Weaponry",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Own 2 unit upgrade technologies."
+            },
+            "Erect a Monument": {
+                "Title": "Erect a Monument",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc":  "Spend 8 resources"
+            },
+            "Expand Borders": {
+                "Title": "Expand Borders",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc":"Control 6 planets in non-home systems." 
+            },
+            "Found Research Outpost": {
+                "Title": "Found Research Outpost",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc":"Control 3 planets that have technology specialties" 
+            },
+            "Intimidate Council": {
+                "Title": "Intimidate Council",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have 1 or more ships in 2 systems that are adjacent to Mecatol Rex's System."
+            },
+            "Lead from the Front": {
+                "Title": "Lead from the Front",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Spend a total of 3 tokens from your tactic and/or strategy pools"
+            },
+            "Negotiate Trade Routes": {
+                "Title": "Negotiate Trade Routes",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Spend 5 trade goods."
+            },
+            "Sway the Council": {
+                "Title": "Sway the Council",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Spend 8 influence."
+            },
 
-            "Amass Wealth": "Spend 3 influence, 3 resources, and 3 trade goods.",
-            "Build Defenses": "Have 4 or more structures.",
-            "Discover Lost Outposts": "Control 2 planets that have attachments.",
-            "Engineer a Marvel": "Have your flagship or a war sun on the game board.",
-            "Explore Deep Space": "Have units in 3 systems that do not contain planets.",
-            "Improve Infrastrure": "Have structures on 3 planets outside of your home system.",
-            "Make History": "Have units in 2 systems that contain legendary planets, Mecatol Rex, or anomalies.",
-            "Populate the Outer Rim": "Have units in 3 systems on the edge of the game board other than your home system.",
-            "Push Boundaries": "Control more planets than each of 2 of your neighbors.",
-            "Raise a Fleet": "Have 5 or more non-fighter ships in 1 system."
+            "Amass Wealth": {
+                "Title": "Amass Wealth",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Spend 3 influence, 3 resources, and 3 trade goods."
+            },
+            "Build Defenses": {
+                "Title": "Build Defenses",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have 4 or more structures."
+            },
+            "Discover Lost Outposts": {
+                "Title": "Discover Lost Outposts",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Control 2 planets that have attachments."
+            },
+            "Engineer a Marvel": {
+                "Title": "Engineer a Marvel",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have your flagship or a war sun on the game board."
+            },
+            "Explore Deep Space": {
+                "Title": "Explore Deep Space",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have units in 3 systems that do not contain planets."
+            },
+            "Improve Infrastrure": {
+                "Title": "Improve Infrastrure",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have structures on 3 planets outside of your home system."
+            },
+            "Make History": {
+                "Title": "Make History",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have units in 2 systems that contain legendary planets, Mecatol Rex, or anomalies."
+            },
+            "Populate the Outer Rim": {
+                "Title": "Populate the Outer Rim",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have units in 3 systems on the edge of the game board other than your home system."
+            },
+            "Push Boundaries": {
+                "Title": "Push Boundaries",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Control more planets than each of 2 of your neighbors."
+            },
+            "Raise a Fleet": {
+                "Title": "Raise a Fleet",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have 5 or more non-fighter ships in 1 system."
+            }
         },
         "2 Points": {
-            "Centralize Galactic Trade": "Spend 10 trade goods",
-            "Conquer the Weak": "Control 1 planet in the home system of another player",
-            "Form Galactic Brain Trust": "Control 5 planets that have technology specialties",
-            "Found a Golden Age": "Spend 16 resources.",
-            "Galvanize the People": "Spend a total of 6 tokens from your tactic and/or strategy pools",
-            "Manipulate Galactic Law": "Spend 16 resources.",
-            "Master the Sciences": "Own 2 technologies in each of 4 colors.",
-            "Revolutionize Warfare": "Own 3 unit upgrade technologies.",
-            "Subdue the Galaxy": "Control 11 planets in non-home systems",
-            "Unify the Colonies": "Control 6 planets that each have the same planet trait."
+            "Centralize Galactic Trade": {
+                "Title": "Centralize Galactic Trade",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc": "Spend 10 Trade Goods."
+            },
+            "Conquer the Weak": {
+                "Title": "Conquer the Weak",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 1 planet in the home system of another player"
+            },
+            "Form Galactic Brain Trust": {
+                "Title": "Form Galactic Brain Trust",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 5 planets that have technology specialties"
+            },
+            "Found a Golden Age": {
+                "Title": "Found a Golden Age",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Spend 16 resources."
+            },
+            "Galvanize the People": {
+                "Title": "Galvanize the People",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Spend a total of 6 tokens from your tactic and/or strategy pools"
+            },
+            "Manipulate Galactic Law": {
+                "Title": "Manipulate Galactic Law",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Spend 16 resources."
+            },
+            "Master the Sciences": {
+                "Title": "Master the Sciences",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Own 2 technologies in each of 4 colors."
+            },
+            "Revolutionize Warfare": {
+                "Title": "Revolutionize Warfare",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Own 3 unit upgrade technologies."
+            },
+            "Subdue the Galaxy": {
+                "Title": "Subdue the Galaxy",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 11 planets in non-home systems"
+            },
+            "Unify the Colonies": {
+                "Title": "Unify the Colonies",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 6 planets that each have the same planet trait."
+            }
             
         }
     },
     "Secret": {
         "Seize An Icon": {
-            "Type": "status phase",
+            "Title": "Seize An Icon",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
             "Desc": "Control a legendary planet."
         },
         "Stake your Claim": {
-            "Type": "status phase",
+            "Title": "Stake your Claim",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
             "Desc": "Control a planet in a system that contains a planet controlled by another player."
         },
         "Demonstrate Your Power": {
-            "Type": "status phase",
+            "Title": "Demonstrate Your Power",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
             "Desc": "Have 3 or more non-fighter ships in the active system at the end of a space combat."
         },
 
@@ -56,151 +212,225 @@
 
 
         "The Rest Of These Are Probably Wrong": {
-            "Type": "status phase",
+            "Title": "The Rest Of These Are Probably Wrong",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
             "Desc": "Control six systems."
         },
         "Expand Borders": {
-            "Type": "status phase",
+            "Title": "Expand Borders",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
             "Desc": "Control six planets in non-home systems."
         },
         "Form a Spy Network": {
-            "Type": "status phase",
+            "Title": "Form a Spy Network",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 5 action cards in your hand."
         },
         "Gather a Mighty Fleet": {
-            "Type": "status phase",
+            "Title": "Gather a Mighty Fleet",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 5 dreadnoughts on the game board."
         },
         "Lead from the Front": {
-            "Type": "status phase",
+            "Title": "Lead from the Front",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 4 mechs on different planets."
         },
         "Make History": {
-            "Type": "status phase",
+            "Title": "Make History",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control Mecatol Rex and have at least 3 ships in its system."
         },
         "Master the Laws": {
-            "Type": "status phase",
+            "Title": "Master the Laws",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 3 or more laws in play."
         },
         "Monopolize Production": {
-            "Type": "status phase",
+            "Title": "Monopolize Production",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 8 production in one system."
         },
         "Occupy the Fringe": {
-            "Type": "status phase",
+            "Title": "Occupy the Fringe",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control a planet that is in a system adjacent to an anomaly."
         },
         "Protect the Border": {
-            "Type": "status phase",
+            "Title": "Protect the Border",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have a space dock in a system that contains a planet you control that is adjacent to a planet another player controls."
         },
         "Prove Endurance": {
-            "Type": "status phase",
+            "Title": "Prove Endurance",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have units in the wormhole nexus."
         },
         "Raise a Fleet": {
-            "Type": "status phase",
+            "Title": "Raise a Fleet",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 3 space docks on the game board."
         },
         "Rule Distant Lands": {
-            "Type": "status phase",
+            "Title": "Rule Distant Lands",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control a planet that is in a system that is not adjacent to your home system."
         },
         "Sway the Council": {
-            "Type": "agenda phase",
+            "Title": "Sway the Council",
+            "Background": "Secret",
+            "Sub_Header": "agenda phase",
             "Desc": "Be elected by a law or have a planet you control be elected by a law."
         },
         "Turn Their Fleets to Dust": {
-            "Type": "action phase",
+            "Title": "Turn Their Fleets to Dust",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
             "Desc": "Destroy 2 ships belonging to another player in a single space combat."
         },
         "Unify the Colonies": {
-            "Type": "status phase",
+            "Title": "Unify the Colonies",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control 4 cultural planets."
         },
         "Unify the Industry": {
-            "Type": "status phase",
+            "Title": "Unify the Industry",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control 4 industrial planets."
         },
         "Unify the Hinterlands": {
-            "Type": "status phase",
+            "Title": "Unify the Hinterlands",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control 4 hazardous planets."
         },
         "Unveil Flagship": {
-            "Type": "action phase",
+            "Title": "Unveil Flagship",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
             "Desc": "Win a space combat in a system that contains your flagship."
         },
         "Wield Core Influence": {
-            "Type": "status phase",
+            "Title": "Wield Core Influence",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control planets that have a combined influence value of at least 12."
         },
         "Wield Core Resources": {
-            "Type": "status phase",
+            "Title": "Wield Core Resources",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control planets that have a combined resource value of at least 12."
         },
         "Become the Gatekeeper": {
-            "Type": "status phase",
+            "Title": "Become the Gatekeeper",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control both an alpha and a beta wormhole."
         },
         "Defy Space and Time": {
-            "Type": "status phase",
+            "Title": "Defy Space and Time",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have a unit in the wormhole nexus."
         },
         "Forge an Alliance": {
-            "Type": "status phase",
+            "Title": "Forge an Alliance",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have a promissory note in your play area that was not dealt to you."
         },
         "Develop Weaponry": {
-            "Type": "status phase",
+            "Title": "Develop Weaponry",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Own 2 faction technologies."
         },
         "Diversify Research": {
-            "Type": "status phase",
+            "Title": "Diversify Research",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Own 2 technologies in each of 2 colors."
         },
         "Engineer a Marvel": {
-            "Type": "status phase",
+            "Title": "Engineer a Marvel",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 4 PDS units on the game board."
         },
         "Establish Hegemony": {
-            "Type": "status phase",
+            "Title": "Establish Hegemony",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Be neighbors with all other players."
         },
         "Raise a Legion": {
-            "Type": "status phase",
+            "Title": "Raise a Legion",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 9 ground forces on a single planet that does not contain a space dock."
         },
         "Reclaim Ancient Monuments": {
-            "Type": "status phase",
+            "Title": "Reclaim Ancient Monuments",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control 2 planets that each have a technology specialty."
         },
         "Revolutionize Warfare": {
-            "Type": "status phase",
+            "Title": "Revolutionize Warfare",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Own 4 technologies of the same color."
         },
         "Scavenge Remnants": {
-            "Type": "status phase",
+            "Title": "Scavenge Remnants",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have 2 relic fragments of the same type."
         },
         "Strengthen Bonds": {
-            "Type": "status phase",
+            "Title": "Strengthen Bonds",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Have all of your neighbors."
         },
         "Threaten Enemies": {
-            "Type": "status phase",
+            "Title": "Threaten Enemies",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
             "Desc": "Control a planet in a system adjacent to another player's home system."
         },
         "Turn Their Worlds to Ashes": {
-            "Type": "action phase",
+            "Title": "Turn Their Worlds to Ashes",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
             "Desc": "Use bombardment to destroy all infantry on a planet."
         },
         "Vanquish Their Armada": {
-            "Type": "action phase",
+            "Title": "Vanquish Their Armada",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
             "Desc": "Destroy another player's flagship or war sun."
         },
         "Wipe Their Forces": {
-            "Type": "action phase",
+            "Title": "Wipe Their Forces",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
             "Desc": "Destroy all of another player's fighters in a single combat using anti-fighter barrage."
         }
     }

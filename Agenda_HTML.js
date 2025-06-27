@@ -1,5 +1,5 @@
-export // What this class to only make the HTML part
-class Agenda_HTML {
+
+export class Agenda_HTML {
     constructor(parent, index, key) {
         this.Parent = parent;
         this.Index = index;

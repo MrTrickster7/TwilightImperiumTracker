@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Michroma:wght@400;700&display=swap");
+
+
+
+
+
+.Card-Container {
+    height: 100%;
+    /* height: 300px; */
+    /* width: 200px; */
+}
+
+.Card-Image {
+    height: 100%;
+    width: 100%;
+    background-image: url('SVGs/Public-1-Point.png');
+    background-size: cover; /* Ensures the image fits the div */
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center; /* Centers the image */
+    position: relative;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.Orange-White-Font-Gradient {
+    font-family: 'Michroma', sans-serif;
+    /* font-weight: 700; */
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ff8800, #ffffff); /* Gradient from red to blue */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+    background-clip: text; /* Standard property */
+    color: transparent; /* Makes the text transparent so the gradient shows */
+    display: inline-block;
+}
+
+.Blue-White-Font-Gradient {
+    font-family: 'Michroma', sans-serif;
+    /* font-weight: 700; */
+    text-transform: uppercase;
+    background: linear-gradient(to right, #002aff, #ffffff); /* Gradient from red to blue */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+    background-clip: text; /* Standard property */
+    color: transparent; /* Makes the text transparent so the gradient shows */
+    display: inline-block;
+}
+
+
+.Card-Title {
+    width: 95%;
+    height: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: calc(2cqw);
+    line-height: calc(2cqw);
+}
+
+.Card-Type {
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(1.5cqw);
+
+}
+
+.Cards-Main-Body {
+    width: 90%;
+    height: 48%;
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: calc(2.5cqw);
+    line-height: calc(2.5cqw);
+}
+
+.Card-Footer {
+    width: 90%;
+    height: 7%;
+    margin-top: 26%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(2cqw);
+    line-height: calc(2cqw);
+}
+
+
+
+
+
+
+

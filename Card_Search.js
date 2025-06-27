@@ -1,4 +1,4 @@
-import {} from './Agenda_HTML.js';
+import { Agenda_HTML } from './Agenda_HTML.js';
 export class Card_Search {
     constructor() {
         this.keyList = document.getElementById("Card-List");
