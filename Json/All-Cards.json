@@ -1,0 +1,846 @@
+{
+    "Public-1-Point": {
+            "Corner the Market": {
+                "Title": "Corner the Market",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Control 4 planets that each have the same planet trait."
+            },
+            "Diversify Research": {
+                "Title": "Diversify Research",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Own 2 technologies in each of 2 colors"
+            },
+            "Develop Weaponry": {
+                "Title": "Develop Weaponry",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Own 2 unit upgrade technologies."
+            },
+            "Erect a Monument": {
+                "Title": "Erect a Monument",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc":  "Spend 8 resources"
+            },
+            "Expand Borders": {
+                "Title": "Expand Borders",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc":"Control 6 planets in non-home systems." 
+            },
+            "Found Research Outpost": {
+                "Title": "Found Research Outpost",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc":"Control 3 planets that have technology specialties" 
+            },
+            "Intimidate Council": {
+                "Title": "Intimidate Council",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have 1 or more ships in 2 systems that are adjacent to Mecatol Rex's System."
+            },
+            "Lead from the Front": {
+                "Title": "Lead from the Front",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Spend a total of 3 tokens from your tactic and/or strategy pools"
+            },
+            "Negotiate Trade Routes": {
+                "Title": "Negotiate Trade Routes",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Spend 5 trade goods."
+            },
+            "Sway the Council": {
+                "Title": "Sway the Council",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Spend 8 influence."
+            },
+
+            "Amass Wealth": {
+                "Title": "Amass Wealth",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Spend 3 influence, 3 resources, and 3 trade goods."
+            },
+            "Build Defenses": {
+                "Title": "Build Defenses",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have 4 or more structures."
+            },
+            "Discover Lost Outposts": {
+                "Title": "Discover Lost Outposts",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Control 2 planets that have attachments."
+            },
+            "Engineer a Marvel": {
+                "Title": "Engineer a Marvel",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have your flagship or a war sun on the game board."
+            },
+            "Explore Deep Space": {
+                "Title": "Explore Deep Space",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have units in 3 systems that do not contain planets."
+            },
+            "Improve Infrastrure": {
+                "Title": "Improve Infrastrure",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have structures on 3 planets outside of your home system."
+            },
+            "Make History": {
+                "Title": "Make History",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have units in 2 systems that contain legendary planets, Mecatol Rex, or anomalies."
+            },
+            "Populate the Outer Rim": {
+                "Title": "Populate the Outer Rim",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have units in 3 systems on the edge of the game board other than your home system."
+            },
+            "Push Boundaries": {
+                "Title": "Push Boundaries",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Control more planets than each of 2 of your neighbors."
+            },
+            "Raise a Fleet": {
+                "Title": "Raise a Fleet",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-1-Point",
+                "Desc": "Have 5 or more non-fighter ships in 1 system."
+            }
+        },
+    "Public-2-Point": {
+            "Centralize Galactic Trade": {
+                "Title": "Centralize Galactic Trade",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc": "Spend 10 Trade Goods."
+            },
+            "Conquer the Weak": {
+                "Title": "Conquer the Weak",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 1 planet in the home system of another player"
+            },
+            "Form Galactic Brain Trust": {
+                "Title": "Form Galactic Brain Trust",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 5 planets that have technology specialties"
+            },
+            "Found a Golden Age": {
+                "Title": "Found a Golden Age",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Spend 16 resources."
+            },
+            "Galvanize the People": {
+                "Title": "Galvanize the People",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Spend a total of 6 tokens from your tactic and/or strategy pools"
+            },
+            "Manipulate Galactic Law": {
+                "Title": "Manipulate Galactic Law",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Spend 16 resources."
+            },
+            "Master the Sciences": {
+                "Title": "Master the Sciences",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Own 2 technologies in each of 4 colors."
+            },
+            "Revolutionize Warfare": {
+                "Title": "Revolutionize Warfare",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Own 3 unit upgrade technologies."
+            },
+            "Subdue the Galaxy": {
+                "Title": "Subdue the Galaxy",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 11 planets in non-home systems"
+            },
+            "Unify the Colonies": {
+                "Title": "Unify the Colonies",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 6 planets that each have the same planet trait."
+            }
+            
+        },
+    "Secret": {
+        "Seize An Icon": {
+            "Title": "Seize An Icon",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
+            "Desc": "Control a legendary planet."
+        },
+        "Stake your Claim": {
+            "Title": "Stake your Claim",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
+            "Desc": "Control a planet in a system that contains a planet controlled by another player."
+        },
+        "Demonstrate Your Power": {
+            "Title": "Demonstrate Your Power",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
+            "Desc": "Have 3 or more non-fighter ships in the active system at the end of a space combat."
+        },
+
+
+
+
+
+        "The Rest Of These Are Probably Wrong": {
+            "Title": "The Rest Of These Are Probably Wrong",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
+            "Desc": "Control six systems."
+        },
+        "Expand Borders": {
+            "Title": "Expand Borders",
+            "Sub_Header": "status phase",
+            "Background": "Secret",
+            "Desc": "Control six planets in non-home systems."
+        },
+        "Form a Spy Network": {
+            "Title": "Form a Spy Network",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 5 action cards in your hand."
+        },
+        "Gather a Mighty Fleet": {
+            "Title": "Gather a Mighty Fleet",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 5 dreadnoughts on the game board."
+        },
+        "Lead from the Front": {
+            "Title": "Lead from the Front",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 4 mechs on different planets."
+        },
+        "Make History": {
+            "Title": "Make History",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control Mecatol Rex and have at least 3 ships in its system."
+        },
+        "Master the Laws": {
+            "Title": "Master the Laws",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 3 or more laws in play."
+        },
+        "Monopolize Production": {
+            "Title": "Monopolize Production",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 8 production in one system."
+        },
+        "Occupy the Fringe": {
+            "Title": "Occupy the Fringe",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control a planet that is in a system adjacent to an anomaly."
+        },
+        "Protect the Border": {
+            "Title": "Protect the Border",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have a space dock in a system that contains a planet you control that is adjacent to a planet another player controls."
+        },
+        "Prove Endurance": {
+            "Title": "Prove Endurance",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have units in the wormhole nexus."
+        },
+        "Raise a Fleet": {
+            "Title": "Raise a Fleet",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 3 space docks on the game board."
+        },
+        "Rule Distant Lands": {
+            "Title": "Rule Distant Lands",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control a planet that is in a system that is not adjacent to your home system."
+        },
+        "Sway the Council": {
+            "Title": "Sway the Council",
+            "Background": "Secret",
+            "Sub_Header": "agenda phase",
+            "Desc": "Be elected by a law or have a planet you control be elected by a law."
+        },
+        "Turn Their Fleets to Dust": {
+            "Title": "Turn Their Fleets to Dust",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
+            "Desc": "Destroy 2 ships belonging to another player in a single space combat."
+        },
+        "Unify the Colonies": {
+            "Title": "Unify the Colonies",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control 4 cultural planets."
+        },
+        "Unify the Industry": {
+            "Title": "Unify the Industry",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control 4 industrial planets."
+        },
+        "Unify the Hinterlands": {
+            "Title": "Unify the Hinterlands",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control 4 hazardous planets."
+        },
+        "Unveil Flagship": {
+            "Title": "Unveil Flagship",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
+            "Desc": "Win a space combat in a system that contains your flagship."
+        },
+        "Wield Core Influence": {
+            "Title": "Wield Core Influence",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control planets that have a combined influence value of at least 12."
+        },
+        "Wield Core Resources": {
+            "Title": "Wield Core Resources",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control planets that have a combined resource value of at least 12."
+        },
+        "Become the Gatekeeper": {
+            "Title": "Become the Gatekeeper",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control both an alpha and a beta wormhole."
+        },
+        "Defy Space and Time": {
+            "Title": "Defy Space and Time",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have a unit in the wormhole nexus."
+        },
+        "Forge an Alliance": {
+            "Title": "Forge an Alliance",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have a promissory note in your play area that was not dealt to you."
+        },
+        "Develop Weaponry": {
+            "Title": "Develop Weaponry",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Own 2 faction technologies."
+        },
+        "Diversify Research": {
+            "Title": "Diversify Research",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Own 2 technologies in each of 2 colors."
+        },
+        "Engineer a Marvel": {
+            "Title": "Engineer a Marvel",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 4 PDS units on the game board."
+        },
+        "Establish Hegemony": {
+            "Title": "Establish Hegemony",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Be neighbors with all other players."
+        },
+        "Raise a Legion": {
+            "Title": "Raise a Legion",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 9 ground forces on a single planet that does not contain a space dock."
+        },
+        "Reclaim Ancient Monuments": {
+            "Title": "Reclaim Ancient Monuments",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control 2 planets that each have a technology specialty."
+        },
+        "Revolutionize Warfare": {
+            "Title": "Revolutionize Warfare",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Own 4 technologies of the same color."
+        },
+        "Scavenge Remnants": {
+            "Title": "Scavenge Remnants",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have 2 relic fragments of the same type."
+        },
+        "Strengthen Bonds": {
+            "Title": "Strengthen Bonds",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Have all of your neighbors."
+        },
+        "Threaten Enemies": {
+            "Title": "Threaten Enemies",
+            "Background": "Secret",
+            "Sub_Header": "status phase",
+            "Desc": "Control a planet in a system adjacent to another player's home system."
+        },
+        "Turn Their Worlds to Ashes": {
+            "Title": "Turn Their Worlds to Ashes",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
+            "Desc": "Use bombardment to destroy all infantry on a planet."
+        },
+        "Vanquish Their Armada": {
+            "Title": "Vanquish Their Armada",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
+            "Desc": "Destroy another player's flagship or war sun."
+        },
+        "Wipe Their Forces": {
+            "Title": "Wipe Their Forces",
+            "Background": "Secret",
+            "Sub_Header": "action phase",
+            "Desc": "Destroy all of another player's fighters in a single combat using anti-fighter barrage."
+        }
+    },
+
+"Agenda": {
+  "Anti-Intellectual Revolution": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "After a player researches a technology, they must destroy 1 of their non-fighter ships.",
+    "Against": "At the start of the next strategy phase, each player chooses and exhausts 1 planet for each technology they own."
+  },
+  "Classified Document Leaks": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Warning": "When this agenda is revealed, if there are no scored secret objectives, discard this card and reveal another agenda from the top of the deck.",
+    "Elect": "Elect Scored Secret Objective",
+    "effect": "When this agenda is revealed, if there are no scored secret objectives, discard this card and reveal another agenda. The elected secret objective becomes a public objective."
+  },
+  "Committee Formation": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains this card. Before players vote on an agenda that requires a player to be elected, the owner of this card may discard this card to choose a player to be elected. Players do not vote on that agenda."
+  },
+  "Conventions of War": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Players cannot use BOMBARDMENT against units on cultural planets.",
+    "Against": "Each player that voted 'Against' discards all of their action cards."
+  },
+  "Core Mining": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Hazardous Planet",
+    "effect": "Attach this card to the elected planet's card. Then, destroy 1 infantry on the planet. The resource value of this planet is increased by 2."
+  },
+  "Demilitarized Zone": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Cultural Planet",
+    "effect": "Attach this card to the elected planet's card. Then, destroy all units on that planet. Player's units cannot land, be produced, or be placed on this planet."
+  },
+  "Enforced Travel Ban": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Alpha and beta wormholes have no effect during movement.",
+    "Against": "Destroy each PDS in or adjacent to a system that contains a wormhole."
+  },
+  "Executive Sanctions": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": " Each player can have a maximum of 3 action cards in their hand.",
+    "Against": "Each player discards 1 random action card from their hand."
+  },
+  "Fleet Regulations": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player cannot have more than 4 tokens in their fleet pool.",
+    "Against": "Each player places 1 command token from their reinforcements in their fleet pool."
+  },
+  "Holy Planet of Ixth": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Cultural Planet",
+    "effect": "Attach this card to the elected planet's card. The planet's owner gains 1 victory point. Units on this planet cannot use PRODUCTION. When a player gains control of this planet, they gain 1 victory point. When a player loses control of this planet, they lose 1 victory point."
+  },
+  "Homeland Defense Act": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player can have any number of PDS units on planets they control.",
+    "Against": "Each player destroys 1 of their PDS unit."
+  },
+  "Imperial Arbiter": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains this card. At the end of the strategy phase, the owner of this card may discard this card to swap 1 of their strategy cards with 1 of another player's strategy cards."
+  }, 
+  "Minister Of Commerce": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Planet",
+    "effect": "The elected player gains this card. After the owner of this card replenishes commodities, they gain 1 trade good for each player that is their neighbor."
+  },
+  "Minister Of Exploration": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Planet",
+    "effect": "The elected player gains this card. When the owner of this card gains control of a planet, they gain 1 trade good."
+  },
+  "Minister Of Industy": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Planet",
+    "effect": "The elected player gains this card. When the owner of this card places a space dock in a system, their units in that system may use their PRODUCTION abilities."
+  },
+  "Minister Of Policy": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Planet",
+    "effect": "The elected player gains this card. At the end of the status phase, the owner of this card draws 1 action card."
+  },
+  "Minister Of Science": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Planet",
+    "effect": "The elected player gains this card. When the owner of this card resolves the primary or secondary ability of the 'Technology' strategy card, they do not need to spend resources to research technology."
+  },
+  "Minister Of War": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Planet",
+    "effect": "The elected player gains this card. The owner of this card may discard this card after performing an action to remove 1 of their command counters from the game board and return it to their reinforcements; then they may perform 1 additional action."
+  },
+  "Prophecy of Ixth": {
+    "Type": "LAW",
+    "Needs_Marker": true,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains this card. The owner of this card applies +1 to the result of their fighter's combat rolls. When the owner of this card uses PRODUCTION, they discard this card unless they produce 2 or more fighters."
+  },
+  "Publicize Weapon Schematics": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "If any player owns a war sun technology, all players may ignore all prerequisites on war sun technologies. All war suns lose SUSTAIN DAMAGE.",
+    "Against": "Each player that owns a war sun technology discards all of their action cards."
+  },
+  "Regulated Consription": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "When a player produces units, they produce only 1 fighter and infantry for its cost instead of 2.",
+    "Against": "No effect."
+  },
+  "Representative Government": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Players cannot exhaust planets to cast votes during the agenda phase. Each player may cast 1 vote on each agenda instead.",
+    "Against": "At the start of the next strategy phase, each player that voted 'Against' exhausts all of their cultural planets."
+  },
+  "Research Team: Biotic": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Industrial Planet",
+    "effect": "Attach this card to the elected planet's card. When the owner of this planet researches technology, they may exhaust this card to ignore 1 green prerequisite."
+  },
+  "Research Team: Cybernetic": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Industrial Planet",
+    "effect": "Attach this card to the elected planet's card. When the owner of this planet researches technology, they may exhaust this card to ignore 1 yellow prerequisite."
+  },
+  "Research Team: Propulsion": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Industrial Planet",
+    "effect": "Attach this card to the elected planet's card. When the owner of this planet researches technology, they may exhaust this card to ignore 1 blue prerequisite."
+  },
+  "Research Team: Warfare": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Hazardous Planet",
+    "effect": "Attach this card to the elected planet's card. When the owner of this planet researches technology, they may exhaust this card to ignore 1 red prerequisite."
+  },
+  "Senate Sanctuary": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Cultural Planet",
+    "effect": "Attach this card to the elected planet's card. The influence value of this planet is increased by 2."
+  },
+  "Shard of the Throne": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains this card and 1 victory point. A player gains this card and 1 victory point when they win a combat against the owner of this card. Then, the previous owner of this card loses 1 victory point."
+  },
+  "Shared Research": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player's units can move through nebulae.",
+    "Against": "Each player places a command token from their reinforcements in their home system, if able."
+  },
+  "Terraforming Initiative": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Hazardous Planet",
+    "effect": "Attach this card to the elected planet's card. The resource and influence values of this planet are increased by 1."
+  },
+  "The Crown of Emphidia": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains this card and 1 victory point. A player gains this card and 1 victory point after they gain control of a planet in the home system of this card's owner. Then, the previous owner of this card loses 1 victory point."
+  },
+  "The Crown of Thalnos": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains this card. During each combat round, the owner of this card may reroll any number of dice; they must destroy each of their units that did not produce a hit with its reroll."
+  },
+  "Wormhole Reconstruction": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "All systems that contain either an alpha or beta wormhole are adjacent to each other.",
+    "Against": "Each player places a command token from their reinforcements in each system that contains a wormhole and 1 or more of their ships."
+  },
+
+
+
+  "Archived Secret": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "Elected player draws 1 secret objective."
+  },
+  "Arms Reduction": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player destroys all but 2 of their dreadnaughts and all but 4 of their cruisers.",
+    "Against": "At the start of the next strategy phase, each player exhausts each of their planets that have a technology specialty."
+  },
+  "Colonial Redistribution": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Non-Home Planet Other Than Mecatol Rex",
+    "effect": "Destroy each unit on the elected planet. Then, the player who controls that planet chooses 1 player with the fewest victory points; that player may place 1 infantry from their reinforcements on the elected planet."
+  },
+  "Compensated Disarmament": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Planet",
+    "effect": "Destroy each ground force on the elected planet; for each unit that was destroyed, the player who controls that planet gains 1 trade good."
+  },
+  "Economic Equality": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player returns all of their trade goods to the supply. Then, each player gains 5 trade goods.",
+    "Against": "Each player returns all of their trade goods to the supply."
+  },
+  "Incentive Program": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Draw and reveal 1 stage I public objective from the deck and place it near the public objectives.",
+    "Against": "Draw and reveal 1 stage II public objective from the deck and place it near the public objectives."
+  },
+  "Ixthian Artifact": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "The speaker rolls 1 die. If the result is 6-10, each player may research 2 technologies. If the result is 1-5, destroy all units in Mecatol Rex's system, and each player with units in systems adjacent to Mecatol Rex's system destroys 3 of their units in each of those systems.",
+    "Against": "No effect."
+  },
+  "Judicial Abolishment": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Law",
+    "Warning": "When this agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck.",
+    "effect": "Discard the elected law from play."
+  },
+  "Miscount Disclosed": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Law",
+    "Warning": "When this agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck.",
+    "effect": "Discard the elected law from play."
+  },
+  "Mutiny": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player who voted 'For' gains 1 victory point.",
+    "Against": "Each player who voted 'For' loses 1 victory point."
+  },
+  "New Constitution": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "Warning": "When this agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck.",
+    "For": "Discard all laws in play. At the start of the next strategy phase, each player exhausts each planet in their home system.",
+    "Against": "No effect."
+  },
+  "Public Execution": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player discards all of their action cards. If they have the speaker token, they give it to the player on their left. The elected player cannot vote on any agendas during this agenda phase."
+  },
+  "Seed Of An Epmire": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "The player with most victory points gains 1 victory point.",
+    "Against": "The player with the fewest victory points gains 1 victory point."
+  },
+  "Swords To Plowshares": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player destroys half of their infantry on each planet they control, rounded up. Then, each player gains trade goods equal to the number of their infantry that were destroyed.",
+    "Against": " Each player places 1 infantry from their reinforcements on each planet they control."
+  },
+  "Unconventional Measures": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player that voted 'For' draws 2 action cards.",
+    "Against": "Each player that voted 'For' discards all of their action cards."
+  },
+  "Wormhole Research": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player who has 1 or more ships in a system that contains a wormhole may research 1 technology. Then, destroy all ships in systems that contain an alpha or beta wormhole.",
+    "Against": "Each player that voted 'Against' removes 1 command token from their command sheet and returns it to their reinforcements."
+  },
+
+  "Article Of War": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "All mechs lose their printed abilities except for SUSTAIN DAMAGE.",
+    "Against": "Each player that voted 'For' gains 3 trade goods."
+  },
+  "Checks And Balances": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "When a player chooses a strategy card during the strategy phase, they give that strategy card to another player that does not have 1 (or a player that does not have 2 in a three- or four-player game), if able.",
+    "Against": "Each player readies only 3 of their plan.ets at the end of this agenda phase."
+  },
+  "Nexus Sovereignty": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Alpha and beta wormholes in the wormhole nexus have no effect during movement.",
+    "Against": "Place a gamma wormhole token in the Mecatol Rex system."
+  },
+  "Political Censure": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains this card and 1 victory point. The elected player cannot play action cards. If the owner of this card loses this card, they lose 1 victory point."
+  },
+  "Representative Government [POK]": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "For": "Players cannot exhaust planets to cast votes during the agenda phase; each player may cast 1 vote on each agenda instead. Players cannot cast additional votes.",
+    "Against": "At the start of the next strategy phase, each player that voted 'Against' exhausts all of their cultural planets."
+  },
+  "Search Warrant": {
+    "Type": "LAW",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains this card and draws 2 secret objectives. The owner of this card plays with their secret objectives revealed."
+  },
+  "Armed Forces Standardization": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player places command tokens from their reinforcements so that they have 3 tokens in their tactic pool, 3 tokens in their fleet pool and 2 tokens in their strategy pool. They return any excess tokens to their reinforcements."
+  },
+  "Clandestine": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player removes 2 command tokens from their command sheet and returns those tokens to their reinforcements.",
+    "Against": "Each player removes 1 command token from their fleet pool and returns that token to their reinforcements."
+  },
+  "Covert Lefistaltion": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "effect": "When this agenda is revealed, the speaker draws the next card in the agenda deck but does not reveal it to the other players. Instead, the speaker reads the eligible outcomes aloud (for, against, elect player, etc.); the other players vote for these outcomes as if they were outcomes of this agenda, without knowing their effects."
+  },
+  "Galactic Crisis Pact": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Strategy Card",
+    "effect": "Each player may perform the secondary ability of the elected strategy card without spending a command token; command tokens placed by the ability are placed from a player's reinforcements instead."
+  },
+  "Minister Of Antiques": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains 1 relic."
+  },
+  "Rearmament": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "",
+    "For": "Each player places 1 mech from their reinforcements on a planet they control in their home system.",
+    "Against": "Each player replaces each of their mechs with 1 infantry from their reinforcements."
+  },
+  "Research Grant Reallocation": {
+    "Type": "DIRECTIVE",
+    "Needs_Marker": false,
+    "Elect": "Elect Player",
+    "effect": "The elected player gains any 1 technology of their choice. Then, for each prerequisite on that technology, they remove 1 token from their fleet pool and return it to their reinforcements."
+  }
+}
+ 
+}

@@ -80,7 +80,6 @@ export class Player_Tech_Btn {
         console.error(`Player div #Player-${Index}-Column .All-Tech-Container not found`);
         return null;
         }
-        console.log(playerDiv.querySelectorAll('button'));
         const targetButton = Array.from(playerDiv.querySelectorAll('button')).find(btn => 
         btn.style.mask === `url("./SVGs/Tech-Icons/${this.Icon_Path}-Icon.svg") center center / contain no-repeat`
         );

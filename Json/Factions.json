@@ -1,0 +1,23 @@
+{
+    "Hacan": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Hacan.svg"
+    },
+    "Kortali Tribute": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/kort.svg"
+    },
+    "Cheiran Hordes": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/cheiran.svg"
+    },
+    "Glimmer of Mortheus": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/mort.svg"
+    },
+    "Zelian Purifiers": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/zeli.svg"
+    },
+    "Olradin League": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/olra.svg"
+    },
+    "Zealots of Rhodun": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/rhod.svg"
+    }
+}

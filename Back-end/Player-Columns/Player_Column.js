@@ -1,14 +1,15 @@
-import { Speaker_Token_Btn } from "./Speaker_Token.js";
-import { Player_Strategy_Btn } from "./Startegy_Card.js";
-import { Planets_Total_HTML } from "./Planet_Total.js";
-import { Tech_HTML } from "./Tech_HTML.js";
-import { Modify_Tech_HTML } from  "./Tech_HTML.js";
+import { Speaker_Token_Btn } from "./Rows/Speaker_Token.js";
+import { Player_Strategy_Btn } from "./Rows/Startegy_Card.js";
+import { Planets_Total_HTML } from "./Rows/Planet_Total.js";
+import { Tech_HTML } from "./Rows/Tech-Row/Tech_HTML.js";
+import { Modify_Tech_HTML } from  "./Rows/Tech-Row/Tech_HTML.js";
 
 
 export class Sub_Player_HTML {
-    constructor(Name, Color, Index, Parent) {
+    constructor(Name, Color, Faction, Index, Parent) {
         this.Name = Name;
         this.Color = Color;
+        this.Faction = Faction;
         this.Index = Index;
         this.Parent = Parent;
         this.Score = 0;
@@ -25,7 +26,7 @@ export class Sub_Player_HTML {
     }
 
     Add_Player_Color_Name() {
-        this.Name_Row = new Name_Row(this.Name, this.Color, this.Column);
+        this.Name_Row = new Name_Row(this.Name, this.Color, this.Faction, this.Column);
     }
 
 
@@ -41,9 +42,9 @@ export class Sub_Player_HTML {
 
 
 export class Modify_Player_HTML extends Sub_Player_HTML {
-    constructor(Name, Color, Index) {
+    constructor(Name, Color, Faction, Index) {
         let Parent = document.getElementById("Player-Modify-Tech-Columns");
-        super(Name, Color, Index, Parent);
+        super(Name, Color, Faction, Index, Parent);
         this.Main();
 
     }
@@ -70,9 +71,10 @@ export class Modify_Player_HTML extends Sub_Player_HTML {
 
 
 export class Player_HTML {
-    constructor(Name, Color, Index) {
+    constructor(Name, Color, Faction, Index) {
         this.Name = Name;
         this.Color = Color;
+        this.Faction = Faction;
         this.Index = Index;
         this.Score = 0;
         this.Tech_Modifier_Parent = document.getElementById("Player-Modify-Tech-Columns");
@@ -91,7 +93,7 @@ export class Player_HTML {
     }
 
     Add_Player_Color_Name() {
-        this.Name_Row = new Name_Row(this.Name, this.Color, this.Column);
+        this.Name_Row = new Name_Row(this.Name, this.Color, this.Faction, this.Column);
     }
 
 
@@ -185,10 +187,11 @@ export class Player_HTML {
 }
 
 class Name_Row {
-    constructor(name, color, parent) {
+    constructor(name, color, faction, parent) {
         this.Name = name;
         this.Color = color;
         this.Parent = parent;
+        this.Faction = faction;
         this.Add_Player_Color_Name();
     }
 
@@ -197,6 +200,20 @@ class Name_Row {
         Name_Color_Row.className = "Main-Text-Row";
         Name_Color_Row.classList.add("Name-Color-Row");
         return Name_Color_Row;
+    }
+
+    Make_Icon() {
+        let Icon = document.createElement("img");
+        Icon.src = this.Faction.Icon_Path;
+        return Icon;
+    }
+
+    Make_Icon_Div() {
+        let Icon_Div = document.createElement("div");
+        Icon_Div.className = "Player-Faction-Icon";
+        Icon_Div.appendChild(this.Make_Icon());
+        // Icon_Div.style.backgroundImage = `url('SVGs/Icons/Faction-Icons/${this.Faction}.svg')`;
+        return Icon_Div;
     }
 
     Make_Name_Div() {
@@ -215,8 +232,10 @@ class Name_Row {
 
     Add_Player_Color_Name() {
         let Name_Color_Row = this.Make_Color_Row_Div();
+        this.Icon_Div = this.Make_Icon_Div();
         this.Name_Div = this.Make_Name_Div();
         this.Color_Div = this.Make_Color_Div();
+        Name_Color_Row.appendChild(this.Icon_Div);
         Name_Color_Row.appendChild(this.Name_Div);
         Name_Color_Row.appendChild(this.Color_Div);
         this.Parent.appendChild(Name_Color_Row);

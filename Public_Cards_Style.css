@@ -1,0 +1,64 @@
+
+
+
+
+#Public-Obj-Table {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: #1976d2;
+}
+
+.Public-Obj-Row {
+    margin-top: 10%;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    background-color: #7B1FA2;
+}
+
+.Scoreable-Obj-Container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 20%;
+    background-color:#388e3c;
+}
+
+.Scoreable-Obj-Container .Card-Container {
+    width: 80%;
+}
+
+.Scoreable-Icon-Container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 20%;
+    height: 100%;
+    background-color: #d32f2f;
+}
+
+.Tracker-Btn {
+    height: 15%;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #388e3c67;
+}
+
+.Tracker-Btn img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+}

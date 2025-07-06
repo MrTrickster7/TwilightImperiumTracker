@@ -4,7 +4,11 @@ export class Agenda_HTML {
         this.Parent = parent;
         this.Index = index;
         this.Key = key;
-        this.Agenda_Obj = window.Agenda_Cards_Upper[key];
+        console.log(window.All_Cards_Upper);
+        this.Agenda_Obj = window.Agenda_Cards[key];
+        // this.Agenda_Obj = window.All_Cards_Upper["Agenda"][key];
+        console.log(key);
+        console.log(this.Agenda_Obj);
         
         this.Main();
     }

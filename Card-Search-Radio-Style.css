@@ -1,0 +1,93 @@
+
+
+
+
+#Card-Search-Radio-Container {
+    height: 90%;
+    width: 30%;
+    /* position: relative; */
+    position:absolute;
+    left: 0%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: black; */
+    justify-content: center;
+    align-items: center;
+}
+
+#Card-Search-Radio-Container label {
+    width: 25%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Card-Search-Radio-Container label img {
+    width: 90%;
+    height: 90%;
+}
+
+#Card-Search-Radio-Container label svg {
+    width: 90%;
+    height: 90%;
+}
+
+input[name="Card-Type"] + img {
+    filter: brightness(1);
+}
+
+input[name="Card-Type"]:checked + img {
+    /* filter: brightness(2); */
+    /* fill: rgb(255, 0, 238); */
+    /* background-color: brown; */ 
+    border: 2px solid white;
+}
+
+input[name="Card-Type"]:checked {
+    /* filter: brightness(2); */
+    /* fill: rgb(255, 0, 238); */
+    /* background-color: brown; */ 
+    border: none;
+}
+
+
+
+
+#Card-Search-Radio-Container label input:checked {
+    background-color: brown;
+}
+
+
+
+load-file {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    fill: green;
+}
+
+label svg {
+    fill: white;
+}
+
+
+
+
+#Card-Search-Radio-Container label input {
+    /* width: 20%;
+    height: 100%; */
+    width: 0%;
+    height: 0%;
+    margin: 0%;
+    padding: 0%;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(255, 0, 238);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+

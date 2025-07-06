@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TI4 UI</title>
     <link rel="stylesheet" href="OBJPubStyle.css">
+    <link rel="stylesheet" href="Card-Search-Radio-Style.css">
+    <link rel="stylesheet" href="Public_Cards_Style.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,32 +17,36 @@
         <button id="Side-Remove-Player-Btn" class="Sidebar-Option">Remove Player</button>
         <button id="Modify-Tech-Btn" class="Sidebar-Option">Tech</button>
         <button id="Side-Agenda-Cards-Btn" class="Sidebar-Option">Agenda Cards</button>
+        <button id="Bonus-Card-Btn" class="Sidebar-Option">Bonus Card</button>
     </div>
     <!-- This might get changed to be just a specific section -->
     <div id="Top-Main" class="Top">
-        <div id="Info-Table">
-            <div id="Text-Column">
-                <div id="Name-Color-Row" class="Main-Text-Row">
-                    <div class="Player-Names-Header">Names</div>
+        <div id="Top-Main-Column">
+            <div id="Info-Table">
+                <div id="Text-Column">
+                    <div id="Name-Color-Row" class="Main-Text-Row">
+                        <div class="Player-Names-Header">Names</div>
+                    </div>
+                    <div id="Speaker-Header-Row" class="Main-Text-Row">Speaker</div>
+                    <div id="Score-Header-Row" class="Main-Text-Row">Scores</div>
+                    <div id="Planet-Header-Row" class="Main-Text-Row">Planets</div>
+                    <div id="Tech-Header-Row" class="Main-Text-Row">Tech</div>
                 </div>
-                <div id="Speaker-Header-Row" class="Main-Text-Row">Speaker</div>
-                <div id="Score-Header-Row" class="Main-Text-Row">Scores</div>
-                <div id="Planet-Header-Row" class="Main-Text-Row">Planets</div>
-                <div id="Tech-Header-Row" class="Main-Text-Row">Tech</div>
+                <div id="Player-Columns">
+                    
+                    
+                </div>
             </div>
-            <div id="Player-Columns">
-                
-                
+            <div id="Public-Obj-Table">
+                <div id="Public-Obj-Row1" class="Public-Obj-Row">
+
+                </div>
+                <div id="Public-Obj-Row2" class="Public-Obj-Row">
+
+                </div>
             </div>
         </div>
-        <div id="Public-Obj-Table">
-            <div id="Public-Obj-Row1" class="Public-Obj-Row">
-
-            </div>
-            <div id="Public-Obj-Row2" class="Public-Obj-Row">
-
-                </div>
-            </div>
+        
         
             
     </div>
@@ -62,39 +68,54 @@
 
 
     <div id="Add-Player-Top" class="Top-Overlay Hidden">
-        <div class="Add-Player-Input-Container">
-            <div class="Add-Player-Header">Player Name</div>
-            <input id="Player-Name-Input" type="text" placeholder="player name">
-        </div>
-        <div id="Pick-Color" class="Add-Player-Input-Container">
-            <div class="Add-Player-Header">Select Color</div>
-            <div id="Player-Color-Selector-Container">
-                <label>
-                    <input type="radio" name="color" value="red" checked> Red
-                </label>
-                <label>
-                    <input type="radio" name="color" value="orange"> Orange
-                </label>
-                <label>
-                    <input type="radio" name="color" value="yellow" > Yellow
-                </label>
-                <label>
-                    <input type="radio" name="color" value="green" > Green
-                </label>
-                <label>
-                    <input type="radio" name="color" value="blue" > Blue
-                </label>
-                <label>
-                    <input type="radio" name="color" value="purple" > Purple
-                </label>
-                <label>
-                    <input type="radio" name="color" value="pink" > Pink
-                </label>
-                <label>
-                    <input type="radio" name="color" value="black" > Black
-                </label>
+        <div class="Add-Player-Column">
+            <div class="Add-Player-Input-Container">
+                <div class="Add-Player-Header">Player Name</div>
+                <input id="Player-Name-Input" type="text" placeholder="player name">
+            </div>
+            <div id="Pick-Color" class="Add-Player-Input-Container">
+                <div class="Add-Player-Header">Select Color</div>
+                <div id="Player-Color-Selector-Container">
+                    <label>
+                        <input type="radio" name="color" value="red" checked> Red
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="orange"> Orange
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="yellow" > Yellow
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="green" > Green
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="blue" > Blue
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="purple" > Purple
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="pink" > Pink
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="black" > Black
+                    </label>
+                </div>
             </div>
         </div>
+        <div class="Add-Player-Column">
+            <div id="Main-Body-Faction-Search" class="Cards-Main-Body">
+                <div id="Search-Bar-Container">
+                    <input type="text" id="Faction-Search-Bar" placeholder="Search for a key..."  />
+                </div>
+                <div id="Scrollable-List-Container">
+                    <ul id="Faction-List"></ul>
+                </div>
+            
+
+            </div>
+        </div>
+        
         
         
         <div id="Add-Player-Footer" class="Overlay-Footer">
@@ -124,8 +145,33 @@
 
         </div>
         <div class="Overlay-Footer">
+            
+            
             <button id="Close-Card-Search-Btn" class="Footer-Btn">Close</button>
             <button id="Toggle-Card-Search-Btn" class="Footer-Btn">Toggle</button>
+            <button id="Draw-Card-Search-Btn" class="Footer-Btn">Draw</button>
+            <button id="Random-Card-Search-Btn" class="Footer-Btn">Random</button>
+            <button id="Select-Card-Search-Btn" class="Footer-Btn">Select</button>
+
+            <div id="Card-Search-Radio-Container">
+                <label>
+                    <input type="radio" name="Card-Type" value="Agenda" checked>
+                    <img src="../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Agenda-black.svg">
+                </label>
+                <label>
+                    <input type="radio" name="Card-Type" value="Public-1-Point">
+                    <img src="../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Public 1.svg">
+                </label>
+                <label>
+                    <input type="radio" name="Card-Type" value="Public-2-Point">
+                    <img src="../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Public 2.svg">
+                </label>
+                <label>
+                    <input type="radio" name="Card-Type" value="Secret">
+                    <img src="../../SVGs/Icons/Online-Icons-Converted/Generic-Icons/Secret regular.svg">
+                </label>
+            </div>
+            
         </div>
     </div>
     <script type="module" src="main.js"></script>

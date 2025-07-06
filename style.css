@@ -69,8 +69,17 @@ body {
 
 #Top-Main {
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    overflow:hidden;
+}
+
+#Top-Main-Column {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
     height: 100%;
+    overflow:hidden;
 }
 
 #Info-Table {
@@ -118,7 +127,7 @@ body {
     display: flex;
     flex-direction: column;
     /* height: 100%;' */
-    width: 15%;
+    width: 14%;
     border-right: 2px solid white;
     border-bottom: 1px solid white;
 }
@@ -160,6 +169,24 @@ body {
 
 .Name-Color-Row {
     position: relative;
+}
+
+.Player-Faction-Icon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    z-index: 2;
+}
+
+.Player-Faction-Icon img {
+    height: 100%;
+    position: absolute;
+    left: 0px;
 }
 
 .Player-Color {
@@ -479,13 +506,23 @@ body {
     top: 5%;
     left: 15%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-items: center;
     align-items: center;
 
     width: 70%;
     height: 90%;
     background-color: #212121d1;
+}
+
+.Add-Player-Column {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+
 }
 
 
@@ -739,6 +776,10 @@ body {
 .Cards-Main-Body {
     width: 100%;
     height: 93%;
+    /* position: absolute;
+    top: -10%; */
+    margin: 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -748,6 +789,7 @@ body {
 #Search-Bar-Container {
     width: 100%;
     height: 20%;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -765,6 +807,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: #1976d2; */
+    height: 80%;
     width: 100%;
     overflow: hidden;
     overflow-y: scroll;
@@ -777,6 +821,8 @@ ul {
     /* Removes default padding */
     margin: 0;
     /* Removes default margin */
+
+
 }
 
 li {
@@ -785,20 +831,32 @@ li {
 }
 
 #Card-List {
-    width: 80%;
+    width: 100%;
+    /* padding-left: 5%; */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    overflow-y: scroll;
+
 }
 
 #Card-List li {
-    padding: 2px;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    padding-left: 2%;
 }
 
 #Card-List li button {
     border: none;
-
 }
 
 #Card-Display-Container {
     height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Cards */
@@ -964,46 +1022,70 @@ li {
     padding-top: 5%;
 }
 
+/* Public Card Styling Tried to make it its own file but didn't work */
+
 #Public-Obj-Table {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    flex: 1;
+    overflow:auto;
+    /* height:auto; */
+    /* overflow:inherit; */
+    
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-items: start;
-    background-color: #1976d2;
+    /* background-color: #1976d2; */
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .Public-Obj-Row {
-    margin-top: 10%;
-    height: 30%;
+    margin: 0px;
+    height: 45%;
     width: 100%;
+    /* flex: 1; */
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    background-color: #7B1FA2;
+    /* background-color: #7B1FA2; */
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .Scoreable-Obj-Container {
     display: flex;
     flex-direction: row;
     height: 100%;
-    width: 50%;
-    background-color:#388e3c;
+    width: 20%;
+    /* background-color:#388e3c; */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.Scoreable-Obj-Container .Card-Section {
+    width: 80%;
+    height: 100%;
+}
+
+.Scoreable-Obj-Container .Card-Container {
+    width: 100%;
 }
 
 .Scoreable-Icon-Container {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
     height: 100%;
-    background-color: #d32f2f;
+    /* background-color: #d32f2f; */
+    background-color: rgba(0, 0, 0, 0.521);
 }
 
 .Tracker-Btn {
-    height: 30%;
+    /* margin-top: 10%; */
+    height: 15%;
+    width: 100%;
     background: none;
     border: none;
     cursor: pointer;
@@ -1011,7 +1093,8 @@ li {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #388e3c67;
+    /* background-color: #388e3c67; */
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .Tracker-Btn img {
