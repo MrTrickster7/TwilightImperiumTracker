@@ -1,3 +1,5 @@
+import { Public_Scoring_Card } from "../Cards/Public_Obj.js";
+
 export class Sidebar {
     constructor() {
         this.Is_Open_Btn_Visible = true;
@@ -67,6 +69,16 @@ export class Sidebar {
         };
     }
 
+    Add_Public_Card() {
+        let parent = document.getElementById("Top-Main-Bonus-Cards");
+        let Card = new Public_Scoring_Card(parent, "Public-2-Point");
+        Card.Update_Faction_Icons(window.Selected_Factions);
+    }
+
+    Setup_Bonus_Card_Btn() {
+        document.getElementById("Bonus-Card-Btn").addEventListener('click', this.Add_Public_Card.bind(this));
+    }
+
     Setup() {
         this.Setup_Toggle();
         this.Setup_Sidebar_Add_Player_Btn();
@@ -75,5 +87,6 @@ export class Sidebar {
         this.Setup_Agenda_Cards_Btn();
         this.Setup_Close_Add_Player_Panel();
         this.Setup_Modify_Tech_Btn();
+        this.Setup_Bonus_Card_Btn();
     }
 }

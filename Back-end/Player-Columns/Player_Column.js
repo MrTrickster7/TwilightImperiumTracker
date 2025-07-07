@@ -191,6 +191,7 @@ class Name_Row {
         this.Name = name;
         this.Color = color;
         this.Parent = parent;
+        console.log(faction);
         this.Faction = faction;
         this.Add_Player_Color_Name();
     }
