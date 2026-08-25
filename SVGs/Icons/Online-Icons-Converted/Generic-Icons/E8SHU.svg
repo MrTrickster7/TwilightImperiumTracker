@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="344" height="397" viewBox="0 0 344 397" fill="none">
+  <defs>
+    <linearGradient id="sfttFrame" x1="172" y1="8" x2="172" y2="389" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5EEAD4"/>
+      <stop offset="0.45" stop-color="#0D9488"/>
+      <stop offset="1" stop-color="#115E59"/>
+    </linearGradient>
+    <linearGradient id="sfttWell" x1="172" y1="50" x2="172" y2="347" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B1C1C"/>
+      <stop offset="1" stop-color="#061010"/>
+    </linearGradient>
+    <linearGradient id="sfttTrim" x1="172" y1="8" x2="172" y2="389" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#CCFBF1"/>
+      <stop offset="0.5" stop-color="#5EEAD4"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="sfttGold" x1="172" y1="20" x2="172" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M172 8 L336.97 103.25 L336.97 293.75 L172 389 L7.03 293.75 L7.03 103.25 Z" fill="url(#sfttFrame)"/>
+  <path d="M172 44 L304.2 120.4 L304.2 276.6 L172 353 L39.8 276.6 L39.8 120.4 Z" fill="url(#sfttWell)"/>
+  <path d="M172 56 L293.7 126.3 L293.7 270.7 L172 341 L50.3 270.7 L50.3 126.3 Z"
+        fill="none" stroke="url(#sfttTrim)" stroke-width="3"/>
+
+  <!-- Crown + seat: Support for the Throne. Sits in the top of the well. -->
+  <g fill="none" stroke="url(#sfttGold)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- crown points -->
+    <path d="M148 98 L156 78 L164 94 L172 72 L180 94 L188 78 L196 98" stroke-width="3.4"/>
+    <!-- crown band -->
+    <path d="M148 98 H196" stroke-width="3.4"/>
+    <!-- seat back -->
+    <path d="M158 98 V108" stroke-width="3"/>
+    <path d="M186 98 V108" stroke-width="3"/>
+    <!-- seat + arms -->
+    <path d="M148 108 H196" stroke-width="3.4"/>
+    <path d="M148 108 V114" stroke-width="3"/>
+    <path d="M196 108 V114" stroke-width="3"/>
+    <!-- base -->
+    <path d="M160 108 V118" stroke-width="3"/>
+    <path d="M184 108 V118" stroke-width="3"/>
+    <path d="M156 118 H188" stroke-width="3.2"/>
+  </g>
+
+  <g fill="url(#sfttGold)">
+    <circle cx="24.5" cy="198.5" r="4.2"/>
+    <circle cx="319.5" cy="198.5" r="4.2"/>
+  </g>
+</svg>

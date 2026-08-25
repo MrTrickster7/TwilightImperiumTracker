@@ -3,7 +3,7 @@ import { Player_Strategy_Btn } from "./Rows/Startegy_Card.js";
 import { Planets_Total_HTML } from "./Rows/Planet_Total.js";
 import { Tech_HTML } from "./Rows/Tech-Row/Tech_HTML.js";
 import { Modify_Tech_HTML } from  "./Rows/Tech-Row/Tech_HTML.js";
-
+import { Secret_Total_HTML } from "./Rows/Secret_Counter.js";
 
 export class Sub_Player_HTML {
     constructor(Name, Color, Faction, Index, Parent) {
@@ -139,7 +139,9 @@ export class Player_HTML {
     }
 
     Add_Planet_Total_Row() {
-        new Planets_Total_HTML(this.Column);
+        // new Planets_Total_HTML(this.Column);
+        // new Player_Support_Btn(this.Column);
+        new Secret_Total_HTML(this.Column, this.Index);
     }
 
     Activate_Player() {

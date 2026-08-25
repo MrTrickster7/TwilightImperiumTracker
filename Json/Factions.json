@@ -19,5 +19,25 @@
     },
     "Zealots of Rhodun": {
         "Icon_Path": "SVGs/Icons/Faction-Icons/rhod.svg"
+    },
+    "Mentak Coalition": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Mentak.svg"
+    },
+    "Shipwrights of Axis": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/axis.svg"
+    },
+    "Roh'Dhna Mechatronics": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/rdm.svg"
+    },
+    "L'Tokk Khrash": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Itk.svg"
+    },
+    "Nivyn Star Kings": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/nivy.svg"
+    },
+    "Bentor Conglomerate": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/bent.svg"
     }
+
+    
 }
