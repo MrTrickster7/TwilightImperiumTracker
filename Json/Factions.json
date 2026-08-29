@@ -37,6 +37,21 @@
     },
     "Bentor Conglomerate": {
         "Icon_Path": "SVGs/Icons/Faction-Icons/bent.svg"
+    },
+    "Mirveda Protectorate": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/mirv.svg"
+    },
+    "Vaden Banking Clan": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/vaba.svg"
+    },
+    "Council of Keleres": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Keleres.svg"
+    },
+    "Ghemina Raiders": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/ghem.svg"
+    },
+    "Florzen Profiteers": {
+        "Icon_Path": "SVGs/Icons/Faction-Icons/florz.svg"
     }
 
     
