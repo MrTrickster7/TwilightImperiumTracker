@@ -1,0 +1,238 @@
+{
+    "Arborec": {
+        "Full_Name": "The Arborec",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Arborec.svg"
+    },
+    "Letnev": {
+        "Full_Name": "The Barony of Letnev",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Letnev.svg"
+    },
+    "Saar": {
+        "Full_Name": "The Clan of Saar",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Saar.svg"
+    },
+    "Muaat": {
+        "Full_Name": "The Embers of Muaat",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Muaat.svg"
+    },
+    "Hacan": {
+        "Full_Name": "The Emirates of Hacan",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Hacan.svg"
+    },
+    "Sol": {
+        "Full_Name": "The Federation of Sol",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Sol.svg"
+    },
+    "Creuss": {
+        "Full_Name": "The Ghosts of Creuss",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Creuss.svg"
+    },
+    "L1Z1X": {
+        "Full_Name": "The L1Z1X Mindnet",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/L1Z1X.svg"
+    },
+    "Mentak": {
+        "Full_Name": "The Mentak Coalition",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Mentak.svg"
+    },
+    "Naalu": {
+        "Full_Name": "The Naalu Collective",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Naalu.svg"
+    },
+    "Nekro": {
+        "Full_Name": "The Nekro Virus",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Nekro.svg"
+    },
+    "Sardakk N'orr": {
+        "Full_Name": "Sardakk N'orr",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Sardakk N'orr.svg"
+    },
+    "Jol-Nar": {
+        "Full_Name": "The Universities of Jol-Nar",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Jol-Nar.svg"
+    },
+    "Winnu": {
+        "Full_Name": "The Winnu",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Winnu.svg"
+    },
+    "Xxcha": {
+        "Full_Name": "The Xxcha Kingdom",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Xxcha.svg"
+    },
+    "Yin": {
+        "Full_Name": "The Yin Brotherhood",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Yin.svg"
+    },
+    "Yssaril": {
+        "Full_Name": "The Yssaril Tribes",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Yssaril.svg"
+    },
+    "Argent": {
+        "Full_Name": "The Argent Flight",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Argent.svg"
+    },
+    "Empyrean": {
+        "Full_Name": "The Empyrean",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Empyrean.svg"
+    },
+    "Mahact": {
+        "Full_Name": "The Mahact Gene-Sorcerers",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Mahact.svg"
+    },
+    "Naaz-Rokha": {
+        "Full_Name": "The Naaz-Rokha Alliance",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Naaz-Rokha.svg"
+    },
+    "Nomad": {
+        "Full_Name": "The Nomad",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Nomad.svg"
+    },
+    "Titans": {
+        "Full_Name": "The Titans of Ul",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Titans.svg"
+    },
+    "Vuil'Raith": {
+        "Full_Name": "The Vuil'Raith Cabal",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Vuil'Raith.svg"
+    },
+    "Keleres": {
+        "Full_Name": "The Council Keleres",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Keleres.svg"
+    },
+    "Axis": {
+        "Full_Name": "The Shipwrights of Axis",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Axis.svg"
+    },
+    "Bentor": {
+        "Full_Name": "The Bentor Conglomerate",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Bentor.svg"
+    },
+    "Celdauri": {
+        "Full_Name": "The Celdauri Trade Confederation",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Celdauri.svg"
+    },
+    "Cheiran": {
+        "Full_Name": "The Cheiran Hordes",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Cheiran.svg"
+    },
+    "Cymiae": {
+        "Full_Name": "The Savages of Cymiae",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Cymiae.svg"
+    },
+    "Dih-Mohn": {
+        "Full_Name": "The Dih-Mohn Flotilla",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Dih-Mohn.svg"
+    },
+    "Edyn": {
+        "Full_Name": "The Edyn Mandate",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Edyn.svg"
+    },
+    "Florzen": {
+        "Full_Name": "The Florzen Profiteers",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Florzen.svg"
+    },
+    "Free Systems": {
+        "Full_Name": "The Free Systems Compact",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Free Systems.svg"
+    },
+    "Ghemina": {
+        "Full_Name": "The Ghemina Raiders",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Ghemina.svg"
+    },
+    "Ghoti": {
+        "Full_Name": "The Ghoti Wayfarers",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Ghoti.svg"
+    },
+    "GLEdge": {
+        "Full_Name": "The GLEdge Union",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/GLEdge.svg"
+    },
+    "Ilyxum": {
+        "Full_Name": "The Augurs of Ilyxum",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Ilyxum.svg"
+    },
+    "Kjalengard": {
+        "Full_Name": "The Berserkers of Kjalengard",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Kjalengard.svg"
+    },
+    "Kollecc": {
+        "Full_Name": "The Kollecc Society",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Kollecc.svg"
+    },
+    "Kolume": {
+        "Full_Name": "The Monks of Kolume",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Kolume.svg"
+    },
+    "Kortali": {
+        "Full_Name": "The Kortali Tribunal",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Kortali.svg"
+    },
+    "Kyro": {
+        "Full_Name": "The Kyro Sodality",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Kyro.svg"
+    },
+    "Lanefir": {
+        "Full_Name": "The Lanefir Remnants",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Lanefir.svg"
+    },
+    "Li-Zho": {
+        "Full_Name": "The Li-Zho Dynasty",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Li-Zho.svg"
+    },
+    "L'tokk Khrask": {
+        "Full_Name": "The L'tokk Khrask",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/L'tokk Khrask.svg"
+    },
+    "Mirveda": {
+        "Full_Name": "The Mirveda Protectorate",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Mirveda.svg"
+    },
+    "Mortheus": {
+        "Full_Name": "The Glimmer of Mortheus",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Mortheus.svg"
+    },
+    "Myko-Mentori": {
+        "Full_Name": "The Myko-Mentori",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Myko-Mentori.svg"
+    },
+    "Nivyn": {
+        "Full_Name": "The Nivyn Star Kings",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Nivyn.svg"
+    },
+    "Nokar": {
+        "Full_Name": "The Nokar Sellships",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Nokar.svg"
+    },
+    "Olradin": {
+        "Full_Name": "The Olradin League",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Olradin.svg"
+    },
+    "Rhodun": {
+        "Full_Name": "The Zealots of Rhodun",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Rhodun.svg"
+    },
+    "Roh'Dhna": {
+        "Full_Name": "Roh'Dhna Mechatronics",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Roh'Dhna.svg"
+    },
+    "Tnelis": {
+        "Full_Name": "The Tnelis Syndicate",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Tnelis.svg"
+    },
+    "Vaden": {
+        "Full_Name": "The Vaden Banking Clans",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Vaden.svg"
+    },
+    "Vaylerian": {
+        "Full_Name": "The Vaylerian Scourge",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Vaylerian.svg"
+    },
+    "Veldyr": {
+        "Full_Name": "The Veldyr Sovereignty",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Veldyr.svg"
+    },
+    "Zelian": {
+        "Full_Name": "The Zelian Purifier",
+        "Icon_Path": "SVGs/Icons/Faction-Icons/Zelian.svg"
+    }
+}

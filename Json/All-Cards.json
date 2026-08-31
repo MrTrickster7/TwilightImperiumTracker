@@ -123,17 +123,48 @@
             }
         },
     "Public-2-Point": {
+            "Achieve Supremacy": {
+                "Title": "Achieve Supremacy",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc": "Have your flagship or war sun in another player's home system or the Mecatol Rex system."
+            },
+            "Become a Legend": {
+                "Title": "Become a Legend",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc": "Have units in 4 systems that contain legendary planets, Mecatol Rex, or anomalies"
+            },
+
             "Centralize Galactic Trade": {
                 "Title": "Centralize Galactic Trade",
                 "Sub_Header": "Status Phase",
                 "Background": "Public-2-Point",
                 "Desc": "Spend 10 Trade Goods."
             },
+            "Command an Armada": {
+              "Title": "Command an Armada",
+              "Sub_Header": "Status Phase",
+              "Background": "Public-2-Point",
+              "Desc": "Have 8 or more non-fighter ships in 1 system"
+            },
             "Conquer the Weak": {
                 "Title": "Conquer the Weak",
                 "Sub_Header": "Status Phase",
                 "Background": "Public-2-Point",
-                "Desc":"Control 1 planet in the home system of another player"
+                "Desc":"Control 1 planet that is in another player's home system"
+            },
+            "Construct Massive Cities": {
+                "Title": "Construct Massive Cities",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Have 7 or more structures"
+            },
+            "Control the Borderlands": {
+                "Title": "Control the Borderlands",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Have units in 5 systems on the edge of the game board other than your home system"
             },
             "Form Galactic Brain Trust": {
                 "Title": "Form Galactic Brain Trust",
@@ -157,7 +188,7 @@
                 "Title": "Manipulate Galactic Law",
                 "Sub_Header": "Status Phase",
                 "Background": "Public-2-Point",
-                "Desc":"Spend 16 resources."
+                "Desc":"Spend 16 Influence."
             },
             "Master the Sciences": {
                 "Title": "Master the Sciences",
@@ -165,11 +196,35 @@
                 "Background": "Public-2-Point",
                 "Desc":"Own 2 technologies in each of 4 colors."
             },
+            "Patrol Vast Territories": {
+                "Title": "Patrol Vast Territories",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Have units in 5 systems that do not contain planets"
+            },
+            "Protect the Border": {
+                "Title": "Protect the Border",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Have structures on 5 planets outside of your home system"
+            },
+            "Reclaim Ancient Monuments": {
+                "Title": "Reclaim Ancient Monuments",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 3 planets that have technology specialties"
+            },
             "Revolutionize Warfare": {
                 "Title": "Revolutionize Warfare",
                 "Sub_Header": "Status Phase",
                 "Background": "Public-2-Point",
                 "Desc":"Own 3 unit upgrade technologies."
+            },
+            "Rule Distant Lands": {
+                "Title": "Rule Distant Lands",
+                "Sub_Header": "Status Phase",
+                "Background": "Public-2-Point",
+                "Desc":"Control 2 planets that are each in or adjacent to a different, other player's home system"
             },
             "Subdue the Galaxy": {
                 "Title": "Subdue the Galaxy",
