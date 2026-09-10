@@ -14,6 +14,7 @@ import { Public_Scoring_Card } from './Back-end/Cards/Public_Obj.js';
 // - Add a Draw random btn, need to add decks class
 // - Add a way to modify or delete them after
 // - Add a Bonus Meme for a bonus OBJ card
+// =========Issue with deleting a player column, doesn't remove the tech column=============
 
 
 // - later Add a way to see everything other people are holding

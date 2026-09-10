@@ -2,6 +2,13 @@ import { Player_Tech_Btn } from './Tech_Btn.js';
 
 
 export class Modify_Tech_HTML {
+    constructor(Parent, Faction) {
+        
+    }
+}
+
+
+export class Modify_Tech_HTML {
     constructor(Parent) {
         this.Parent = Parent;
         this.Main_Tech_Colors = ["Red",
@@ -9,8 +16,8 @@ export class Modify_Tech_HTML {
                                 "Green",
                                 "Blue"];
         this.Unit_Tech_Colors = ["Units1", "Units2", "Units3"];
+        this.Faction_Tech = ["Faction"];
         this.Main();
-
     }
 
     Make_Button_Container() {

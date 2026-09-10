@@ -107,3 +107,4 @@ export class Player_Tech_Btn {
         this.Parent.appendChild(this.Tech_Btn);
     }
 }
+

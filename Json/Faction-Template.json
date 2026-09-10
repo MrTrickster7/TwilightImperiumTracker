@@ -1,5 +1,6 @@
 {
     "Arborec": {
+        "Title": "The Arborec",
         "Favorite-Color": ["Green", "Yellow", "Orange", "Black", "Red", "Blue", "Purple", "Pink"],
         "Starting-Tech": ["Magen Defense Grid"],
         "Commodity-Limit": 3,
@@ -20,8 +21,8 @@
                 "Name": "Duha Menaimon",
                 "Cost": 8,
                 "Combat": {
-                    "Rolls": 1,
-                    "Hit-On": 8
+                    "Rolls": 2,
+                    "Hit-On": 7
                 },
                 "Move": 1,
                 "Capacity": 5,
@@ -60,6 +61,8 @@
         "Faction-Cards": {
             "Tech": {
                 " Bioplasmosis": {
+                    "Title": "Bioplasmosis",
+                    "Color": "Green",
                     "Prerequisites": ["Green", "Green"],
                     "Ability-Desc": "At the end of the status phase , you may remove any number of infantry from planets you control and place them on 1 or more planets you control in the same or adjacent systems."
                 },
