@@ -23,6 +23,9 @@ export class Sub_Player_HTML {
         this.Column = document.createElement("div");
         this.Column.id = `Player-${this.Index}-Column`;
         this.Column.className = "Player-Column";
+
+        // Color_Div.style.backgroundColor = Player_Colors[this.Color];
+        // this.Column.style.backgroundColor = Player_Colors[this.Color];
     }
 
     Add_Player_Color_Name() {
@@ -90,6 +93,7 @@ export class Player_HTML {
         this.Column = document.createElement("div");
         this.Column.id = `Player-${this.Index}-Column`;
         this.Column.className = "Player-Column";
+        this.Column.style = `border-top-color: ${Player_Colors[this.Color]};`;
     }
 
     Add_Player_Color_Name() {
@@ -240,7 +244,7 @@ class Name_Row {
         this.Color_Div = this.Make_Color_Div();
         Name_Color_Row.appendChild(this.Icon_Div);
         Name_Color_Row.appendChild(this.Name_Div);
-        Name_Color_Row.appendChild(this.Color_Div);
+        // Name_Color_Row.appendChild(this.Color_Div);
         this.Parent.appendChild(Name_Color_Row);
     }
 
