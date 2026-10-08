@@ -1,11 +1,7 @@
 import { Player_Tech_Btn } from './Tech_Btn.js';
 
 
-export class Modify_Tech_HTML {
-    constructor(Parent, Faction) {
-        
-    }
-}
+
 
 
 export class Modify_Tech_HTML {
